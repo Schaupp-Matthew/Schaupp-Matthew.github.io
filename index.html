@@ -11,9 +11,99 @@
 		</head>
 		
 		<body>
-			<div class="wrapper"></div>
+			<div class="wrapper1">
 				<header>
-					<h1>Study Topics</h1>
+					<h1>Newborn Tracker</h1>
+				</header>
+					
+					<section>
+						<article>
+							<p>The purpose of the web application is to provide a tracking tool that </br>
+							mothers can use to keep track of important factors such as feedings and times, bowel movements, and wet diapers.</br>
+							</br>
+							In order for this application to work properly, it will need access to your local storage </br>
+							in order to save all of the data you record within.  It is important to know that this data remains </br>
+							with you on your computer and is not used by or accessed by any other.  If you clear your local storage </br>
+							in your browser you will loose all of your data.  In addition, you should always use the same browser as </br>
+							you data will only be saved in the browser you are currently using.</br>
+							</br>
+							I hope this web application proves useful and congratulations on your new addition!</br>
+							
+							Below you will find an example of what your saved data will look like:</p>
+						<article>
+						
+						<table>
+							<caption>Example</caption>
+							<tbody>
+								<tr>
+									<th>Time-Date</th>
+									<th>Feeding</th>
+									<th>Amount (oz)</th>
+									<th>Bowel Movement</th>
+									<th>Wet Diaper</th>
+								</tr>
+									<td>7am-9/15</td>
+									<td>Yes</td>
+									<td>2oz</td>
+									<td>Yes</td>
+									<td>Yes</td>
+								<tr>
+									<td>10am-9/5</td>
+									<td>Yes</td>
+									<td>2oz</td>
+									<td>Yes</td>
+									<td>Yes</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+			</div>
+			
+			<div class="wrapper3">
+				<section>
+					<p>Please use the input fields below to add data to your table:</p>
+					
+					<fieldset>
+						<label>Time-Date</label>
+							<input type="text" name="Time-Date" id="timeDate"></input>
+						<label>Feeding</label>
+							<select id="feeding">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+						<label>Amount (oz)</label>
+							<input type="text" name="Amount (oz)" id="amount"></input>
+						<label>Bowel Movement</label>
+							<select id="bm">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+						<label>Wet Diaper</label>
+							<select id="wetDiaper">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+						<button type="button" onclick="addRow()">Submit</button>	
+					</fieldset>
+					
+				</section>
+			</div>
+			
+			<div class="wrapper3" id="tableOutput"></div>
+			
+			<div class="wrapper2">
+				<!--<header>-->
+					<h3>Extra Examples</h3>
+				<!--</header>-->
+				
+					<section>
+						<article>
+							<p>Below you will find extra examples of each technology used in this web application.</br>
+							   These examples are on an as needed basis only.
+							</p>
+						</article>
+					</section>
+					
 					<nav>
 						<ol>
 							<li><a href="/Pages/sub1" class="">Loops, Conditional Statements, Functions, Variables, Parameter, Arrays, Associative Arrays</a></li>
@@ -31,12 +121,6 @@
 							<li><a href="/Pages/sub13" class="">Designing, Defining, and Triggering CSS3 Animations without Custom Libraries (Thought Library)</a></li>
 						</ol>
 					</nav>
-				</header>
-				
-				<section>
-					<article>
-						<p>The links above will take you to examples of the study topics for CIT 261</p>
-					</article>
-				</section>
+			</div>
 		</body>
 	</html>

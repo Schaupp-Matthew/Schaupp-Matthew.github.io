@@ -1,3 +1,7 @@
+//Global variables:
+
+
+//functions:
 function numGame() {
 	var a = Math.floor((Math.random()*100)+1);
 	var g;
@@ -34,4 +38,10 @@ if (guess == answer){
 	window.alert(messageGuess);}
 }
 
-
+function addRow() {
+	var row = {timeDate:"getElementById("timeDate")", feeding:"getElementById("feeding")", amount:"getElementById("amount")", bm:"getElementById("bm")", wetDiaper:"getElementById("wetDiaper")"};
+	
+	var TableArray = []; 
+	
+	
+}
