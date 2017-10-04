@@ -34,3 +34,4 @@ if (guess == answer){
 	window.alert(messageGuess);}
 }
 
+
