@@ -1,6 +1,10 @@
 //Global variables:
 
 
+//Global objects:
+tableArray = [];
+
+
 //functions:
 function numGame() {
 	var a = Math.floor((Math.random()*100)+1);
@@ -39,9 +43,34 @@ if (guess == answer){
 }
 
 function addRow() {
-	var row = {timeDate:"getElementById("timeDate")", feeding:"getElementById("feeding")", amount:"getElementById("amount")", bm:"getElementById("bm")", wetDiaper:"getElementById("wetDiaper")"};
 	
-	var TableArray = []; 
+	var t = document.getElementById('timeDate').value;
+	var f = document.getElementById('feeding').value;
+	var a = document.getElementById('amount').value;
+	var b = document.getElementById('bm').value;
+	var w = document.getElementById('wetDiaper').value;
+	
+	//document.getElementById('tableOutput').innerHTML = t;
+	
+	var row = new Object();
+		row.timeDate = t;
+		row.feeding = f;
+		row.amount = a;
+		row.bm = b;
+		row.wetDiaper = w;
+	
+	//var row = {timeDate:"getElementById("timeDate")", feeding:"getElementById("feeding")", amount:"getElementById("amount")", bm:"getElementById("bm")", wetDiaper:"getElementById("wetDiaper")"};
+	
+	//document.write(row.timeDate);
+	
+	//var table = [row];
+
+	//var addRow = 
+	tableArray.splice(0, 0, row);
+	
+	
+	
+	document.getElementById('tableOutput').innerHTML = tableArray.toString();
 	
 	
 }
