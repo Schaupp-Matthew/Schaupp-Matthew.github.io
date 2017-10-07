@@ -79,7 +79,6 @@ function addRow() {
 function addItem() {
 	var add = document.getElementById('add').value;
 	list.splice(0, 0, add);
-	reset();
 }
 
 function removeItem() {
@@ -87,9 +86,10 @@ function removeItem() {
 }
 
 function showList () {
+	
+	
 	document.getElementById('list').innerHTML = list.toString();
+	
+	
 }
 
-function reset() {
-	document.getElementById("add").reset();
-}
