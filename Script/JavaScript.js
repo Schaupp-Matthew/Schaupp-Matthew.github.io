@@ -99,7 +99,7 @@ function jokes() {
 	var i = 0
 	var x = 0;
 	
-	Do {
+	Do{
 		window.alert(jokesArray[x]);
 		window.alert(answerArray[x]);
 		x++;
@@ -107,7 +107,7 @@ function jokes() {
 	} 
 	while (i < 3);
 	
-	document.getElementById('jokes').innerHTML = "Thank you, thank you.  I'll be here whenever you need a laugh."
+	document.getElementById('jokes').innerHTML = "Thank you, thank you.  I'll be here whenever you need a laugh.";
 	
 }
 
