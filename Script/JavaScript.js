@@ -96,15 +96,16 @@ function showList () {
 function jokes() {
 	jokesArray = ["What do you call a three humped camel?", "What do you call a bear with no shoes?", "What did the digital watch say to its mother?"];
 	answerArray = ["Pregnant!", "Bare foot!", "Look ma! No hands!"];
+	var i = 0
+	var x = 0;
 	
 	Do {
-		var i = 0
-		var x = 0;
 		window.alert(jokesArray[x]);
 		window.alert(answerArray[x]);
-		x = x + 1;
+		x++;
 		i++;
-	} while (i < 3);
+	} 
+	while (i < 3);
 	
 	document.getElementById('jokes').innerHTML = "Thank you, thank you.  I'll be here whenever you need a laugh."
 	
