@@ -99,7 +99,7 @@ function jokes() {
 	var i = 0
 	var x = 0;
 	
-	Do{
+	do{
 		window.alert(jokesArray[x]);
 		window.alert(answerArray[x]);
 		x++;
