@@ -116,10 +116,10 @@ function createPost() {
 		post.miles = document.getElementById('miles').value;
 		post.description = document.getElementById('description').value;
 		
-	var output = 	"Make: " + post.make + <br /> +
-					"Model: " + post.model + <br /> +
-					"Year: " + post.year + <br /> +
-					"Miles: " + post.miles + <br /> +
+	var output = 	"Make: " + post.make + "<br />" +
+					"Model: " + post.model + "<br />" +
+					"Year: " + post.year + "<br />" +
+					"Miles: " + post.miles + "<br />" +
 					"Description: " + post.description;
 					
 	document.getElementById('post').innerHTML = output;
