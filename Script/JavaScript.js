@@ -79,7 +79,6 @@ function addRow() {
 function addItem() {
 	var add = document.getElementById('add').value;
 	list.splice(0, 0, add);
-	
 }
 
 function removeItem() {
@@ -88,11 +87,7 @@ function removeItem() {
 }
 
 function showList () {
-	
-	
 	document.getElementById('list').innerHTML = list.toString();
-	
-	
 }
 
 function jokes() {
@@ -113,3 +108,20 @@ function jokes() {
 	
 }
 
+function createPost() {
+	var post = new Object();
+		post.make = document.getElementById('make').value;
+		post.model = document.getElementById('model').value;
+		post.year = document.getElementById('year').value;
+		post.miles = document.getElementById('miles').value;
+		post.description = document.getElementById('description').value;
+		
+	var output = 	"Make: " + post.make + <br /> +
+					"Model: " + post.model + <br /> +
+					"Year: " + post.year + <br /> +
+					"Miles: " + post.miles + <br /> +
+					"Description: " + post.description;
+					
+	document.getElementById('post').innerHTML = output;
+	
+}

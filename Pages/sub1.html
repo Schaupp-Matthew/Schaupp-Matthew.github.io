@@ -69,7 +69,7 @@
 							<div id="list"></div>
 							
 							<input type="text" id="add"></input> <button onclick="addItem()">Add Item</button>
-							<input type="text" id="remove"></input> <button onclick="removeItem()">Remove Item</button>
+							<button onclick="removeItem()">Remove Item</button>
 							<button onclick="showList()">Show List</button>
 							
 							
@@ -84,9 +84,28 @@
 				<section>
 					<header><h2>Associative Arrays</h2><header/>
 						<article>
-							<p></p>
-							<button onclick=""></button>
-							<div></div>
+							<p>From what I have studied, Arrays are objects and in JavaScript Associative arrays are not supported. <br />
+							However, because arrays are objects you can make an associative array by making an object.  Thus each item in the <br />
+							array will be referenced by a name instead of an index number.</p>
+							
+							<form>
+								<select id="make">
+									<option value="Audi">Audi</option>
+									<option value="Ford">Ford</option>
+									<option value="Dodge">Dodge</option>
+									<option value="Chevy">Chevy</option>
+									<option value="Toyota">Toyota</option>
+									<option value="Nissan">Nissan</option>
+									<option value="BMW">BMW</option>
+									<option value="Mercedes">Mercedes</option>
+								</select>
+								<input type="text" id="model">Model</input>
+								<input type="text" id="year">Year</input>
+								<input type="text" id="miles">Miles</input>
+								<textarea type="text" id="description"></textarea>
+								<button type="button" onclick="createPost()">Submit/Post Ad</button>
+							</form>
+							<div id="post"></div>
 						</article>
 				</section>
 				
