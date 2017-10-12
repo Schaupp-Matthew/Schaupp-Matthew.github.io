@@ -79,10 +79,12 @@ function addRow() {
 function addItem() {
 	var add = document.getElementById('add').value;
 	list.splice(0, 0, add);
+	
 }
 
 function removeItem() {
-	
+	var x = list.pop();
+	document.getElementById('list').innerHTML = x + " was removed from the list.";
 }
 
 function showList () {
