@@ -5,6 +5,10 @@
 tableArray = [];
 list = [];
 
+var person = new Object();
+var place = new Object();
+var thing = new Object();
+
 
 //functions:
 function numGame() {
@@ -125,3 +129,4 @@ function createPost() {
 	document.getElementById('post').innerHTML = output;
 	
 }
+
