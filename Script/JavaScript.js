@@ -153,7 +153,7 @@ function createObject() {
 			var output = place.name + " has been created!";
 			document.getElementById('output').innerHTML = output;
 	}
-	else (x == "Thing") {
+	else if (x == "Thing") {
 		thing.name = document.getElementById('name').value;
 		thing.description = document.getElementById('description').value;
 		thing.action = function() {
