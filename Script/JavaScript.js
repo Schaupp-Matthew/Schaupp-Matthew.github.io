@@ -145,7 +145,7 @@ function createObject() {
 		
 		var bob = Object.create(person);
 			bob.name = "Hi, my name is Bob down here!"  //Not, " + person.name + ".";
-			document.getElementById('inherit').innerHTML = bob.name + "<br/>" + bob.description;
+			document.getElementById('inherit').innerHTML = bob.name + "<br/><br/>Inherited Description: <br/>" + bob.description;
 	}
 	else if (x == "Place") {
 		place.name = document.getElementById('name').value;
@@ -158,8 +158,8 @@ function createObject() {
 			document.getElementById('output').innerHTML = output;
 			
 		var durban = Object.create(place);
-			durban.name = "Durban, South Africa is down here not " + place.name + "."; 
-			document.getElementById('inherit').innerHTML = durban.name + "<br/>" + durban.description;
+			durban.name = "Durban, South Africa is down here not!"; 
+			document.getElementById('inherit').innerHTML = durban.name + "<br/><br/>Inherited Description: <br/>" + durban.description;
 	}
 	else if (x == "Thing") {
 		thing.name = document.getElementById('name').value;
@@ -172,8 +172,8 @@ function createObject() {
 			document.getElementById('output').innerHTML = output;
 			
 		var phone = Object.create(thing);
-			phone.name = "I am a phone down here.  Not a " + thing.name + ".";
-			document.getElementById('inherit').innerHTML = phone.name + "<br/>" + phone.description;
+			phone.name = "I am a phone down here!  Ring-ring!!!";
+			document.getElementById('inherit').innerHTML = phone.name + "<br/><br/>Inherited Description: <br/>" + phone.description;
 	}
 }
 
