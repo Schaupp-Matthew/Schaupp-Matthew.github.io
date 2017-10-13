@@ -142,6 +142,10 @@ function createObject() {
 		}
 		var output = person.name + " has been created!";
 		document.getElementById('output').innerHTML = output;
+		
+		var bob = Object.create(person);
+			bob.name = "Hi, my name is Bob.  Not, " + person.name + ".";
+			document.getElementById('inherit').innerHTML = bob.name + "<br/>" + bob.description;
 	}
 	else if (x == "Place") {
 		place.name = document.getElementById('name').value;
@@ -152,6 +156,10 @@ function createObject() {
 		}
 			var output = place.name + " has been created!";
 			document.getElementById('output').innerHTML = output;
+			
+		var durban = Object.create(place);
+			durban.name = "Durban, South Africa is down here not " + place.name + "."; 
+			document.getElementById('inherit').innerHTML = durban.name + "<br/>" + durban.description;
 	}
 	else if (x == "Thing") {
 		thing.name = document.getElementById('name').value;
@@ -162,6 +170,10 @@ function createObject() {
 		}
 		var output = thing.name + " has been created!";
 			document.getElementById('output').innerHTML = output;
+			
+		var phone = Object.create(thing);
+			phone.name = "I am a phone down here.  Not a " + thing.name + ".";
+			document.getElementById('inherit').innerHTML = phone.name + "<br/>" + phone.description;
 	}
 }
 
