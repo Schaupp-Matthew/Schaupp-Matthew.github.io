@@ -144,7 +144,7 @@ function createObject() {
 		document.getElementById('output').innerHTML = output;
 		
 		var bob = Object.create(person);
-			bob.name = "Hi, my name is Bob.  Not, " + person.name + ".";
+			bob.name = "Hi, my name is Bob down here!"  //Not, " + person.name + ".";
 			document.getElementById('inherit').innerHTML = bob.name + "<br/>" + bob.description;
 	}
 	else if (x == "Place") {
