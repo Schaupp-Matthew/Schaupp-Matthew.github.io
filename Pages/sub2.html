@@ -23,16 +23,27 @@
 							different kinds of real life objects:  A person, a place, and a thing.  Once you have input <br/>
 							your desired values, they are passed as parameters to a function that creates the object in memory.<br/>
 							The object and its attributes can now be referenced as shown bellow.</p>
-							<button onclick="">Create Objects</button>
 							
-							<p>Select Type of Object</p>
+							<p>Select Type of Object:</p>
 							<select id="objectType">
-								<option>Person</option>
-								<option>Place</option>
-								<option>Thing</option>
+								<option value="Person">Person</option>
+								<option value="Place">Place</option>
+								<option value="Thing">Thing</option>
 							</select>
+							<p>Object Name: </p><input type="text" id="name"/>
+							<p>Object Description: </p><textarea type="text" id="description"></textarea>
 							
-							<div></div>
+							<button onclick="createObject()">Create Object</button>
+							
+							<div id="output"></div>
+							
+							<p>After creating an object, click the appropriate button to make it do something: </p>
+							
+							<button onclick="person.action()">Person Action</button>
+							<button onclick="place.action()">Place Action</button>
+							<button onclick="thing.action()">Thing Action</button>
+							
+							<div id="output2"></div>
 						</article>
 					</section>
 					

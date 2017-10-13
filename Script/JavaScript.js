@@ -130,3 +130,38 @@ function createPost() {
 	
 }
 
+function createObject() {
+	var x = document.getElementById('objectType').value;
+	
+	if (x == "Person") {
+		person.name = document.getElementById('name').value;
+		person.description = document.getElementById('description').value;
+		person.action = action() {
+			var sayHello = "Hello!  My name is " + person.name + ". " + "Nice to meet you, and I hope you have a great day!";
+			document.getElementById('output2').innerHTML = sayHello;
+		}
+		var output = person.name + " has been created!";
+		document.getElementById('output').innerHTML = output;
+	}
+	else if (x == "Place") {
+		place.name = document.getElementById('name').value;
+		place.description = document.getElementById('description').value;
+		place.action = action() {
+			var description = place.name + ": <br />" + place.description;
+			document.getElementById('output2').innerHTML = description;
+		}
+			var output = place.name + " has been created!";
+			document.getElementById('output').innerHTML = output;
+	}
+	else (x == "Thing") {
+		thing.name = document.getElementById('name').value;
+		thing.description = document.getElementById('description').value;
+		thing.action = action() {
+			var what = "Wow!  You have a " + thing.name + " with these specs: <br />" + thing.description; 
+			document.getElementById('output2').innerHTML = what;
+		}
+		var output = thing.name + " has been created!";
+			document.getElementById('output').innerHTML = output;
+	}
+}
+
