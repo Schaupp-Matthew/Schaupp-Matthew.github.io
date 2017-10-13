@@ -136,7 +136,7 @@ function createObject() {
 	if (x == "Person") {
 		person.name = document.getElementById('name').value;
 		person.description = document.getElementById('description').value;
-		person.action = action() {
+		person.action = function action() {
 			var sayHello = "Hello!  My name is " + person.name + ". " + "Nice to meet you, and I hope you have a great day!";
 			document.getElementById('output2').innerHTML = sayHello;
 		}
@@ -146,7 +146,7 @@ function createObject() {
 	else if (x == "Place") {
 		place.name = document.getElementById('name').value;
 		place.description = document.getElementById('description').value;
-		place.action = action() {
+		place.action = function action() {
 			var description = place.name + ": <br />" + place.description;
 			document.getElementById('output2').innerHTML = description;
 		}
@@ -156,7 +156,7 @@ function createObject() {
 	else (x == "Thing") {
 		thing.name = document.getElementById('name').value;
 		thing.description = document.getElementById('description').value;
-		thing.action = action() {
+		thing.action = function action() {
 			var what = "Wow!  You have a " + thing.name + " with these specs: <br />" + thing.description; 
 			document.getElementById('output2').innerHTML = what;
 		}
