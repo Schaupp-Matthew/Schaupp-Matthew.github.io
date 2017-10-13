@@ -32,14 +32,14 @@ table {
 	border-spacing: 0px;
 }
 
-tr. td {
+td {
 	padding: 5px 30px 5px 10px;
 	border-spacing: 0px;
 	font-size: 90%;
 	margin: 0px;
 }
 
-tr. td {
+td {
 	text-align: left;
 	background-color: #e0e9f0;
 	border-top: 1px solid #f1f8fe;
@@ -47,7 +47,7 @@ tr. td {
 	border-right: 1px solid #cbd2d8;
 }
 
-tr. th {
+th {
 	color: #ffffff;
 	background-color: #90b4d6;
 	border-bottom: 2px solid #547ca0;
