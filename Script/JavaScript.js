@@ -219,4 +219,18 @@ function myFirstJSON() {
 	
 }
 
-
+function initialObject() {
+	var initialObject = "var objectJ = {"contacts":[
+	{"firstname":"<h3>First Name</h3>", "lastname":"<h3>Last Name</h3>", "phonenumber":"<h3>Phone Number</h3>", "address":"<h3>Address</h3>"},
+	{"firstname":"Matthew", "lastname":"Smith", "phonenumber":"7928739878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Nathan", "lastname":"Smith", "phonenumber":"6988766878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jonathan", "lastname":"Smith", "phonenumber":"3457657899", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jessica", "lastname":"Smith", "phonenumber":"87667887678", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Michael", "lastname":"Smith", "phonenumber":"98778998789", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ashley", "lastname":"Smith", "phonenumber":"98756754320", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ariana", "lastname":"Smith", "phonenumber":"6577659878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Alivia", "lastname":"Smith", "phonenumber":"98777778987", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"}
+	]
+}";
+	document.getElementById('initialObject').innerHTML = initialObject;
+}
