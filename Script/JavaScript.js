@@ -219,7 +219,7 @@ function myFirstJSON() {
 	
 }
 
-function initialObject() {
+/* function initialObject() {
 	var initialObject = "var objectJ = {"contacts":[
 	{"firstname":"<h3>First Name</h3>", "lastname":"<h3>Last Name</h3>", "phonenumber":"<h3>Phone Number</h3>", "address":"<h3>Address</h3>"},
 	{"firstname":"Matthew", "lastname":"Smith", "phonenumber":"7928739878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
@@ -233,4 +233,4 @@ function initialObject() {
 	]
 }";
 	document.getElementById('initialObject').innerHTML = initialObject;
-}
+} */
