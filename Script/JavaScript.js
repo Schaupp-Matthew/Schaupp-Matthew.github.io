@@ -227,6 +227,36 @@ function myFirstParse() {
 	var message = "Now the JSON string with the objects data has been turned back into an object which can be used again";
 	document.getElementById('message').innerHTML = message;
 	
-	var example = "For example" + parseObjectJ.contacts[3].firstname + "'s" + " phone number is " + parseObjectJ.contacts[3].phonenumber + ".";
+	var example = "For example: " + parseObjectJ.contacts[3].firstname + "'s" + " phone number is " + parseObjectJ.contacts[3].phonenumber + ".";
 	document.getElementById('example').innerHTML = example;
+}
+
+function jobsTable() {
+	var jobsData = new XMLHttpRequest();
+	jobsData.onreadystatechange = function() {
+		if(this.readyState == 4 && this.status == 200) {
+			var jobsJSON = JSON.parse(this.responseText);
+			var status = this.statusText;
+			document.getElementById('status').innerHTML = status;
+			document.getElementById('jobsJSON').innerHTML = jobsJSON;
+			buildTable(jobsJSON);
+		}
+		else {
+			var status = this.statusText;
+			document.getElementById('status').innerHTML = status;
+		}
+	};
+	jobsData.open("GET", "https://jobs.github.com/positions.json", true);
+	jobsData.send();
+}
+
+function buildTable(j) {
+	/* var x;
+	var table = "<table border='1'>";
+	
+	for (x in j.) {
+		tableJ += "<tr><td>" + objectJ.contacts[i].firstname + "</td>" + "<td>" + objectJ.contacts[i].lastname + "</td>" + "<td>" + objectJ.contacts[i].phonenumber + "</td>" + "<td>" + objectJ.contacts[i].address + "</td></tr>";
+	}
+	tableJ += "</table>";
+	document.getElementById("tableJOutput").innerHTML = "<p>You have just used JSON stringify to turn the object that contains all of the data in this table into a JSON string.</p><br/>" + tableJ; */
 }

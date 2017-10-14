@@ -7,7 +7,13 @@
 			<meta name="description" content="CIT 261 Sandbox">
 			<meta name="Matt" content="CIT 261">
 			<title>CIT 261 Sandbox Pages</title>
-			<style type="text/css"></style>
+			<link href="/Style/styleSheet.css" type="text/css" rel="stylesheet" />
+			
+			<script language="javascript" type="text/javascript" src="/Script/JavaScript.js">
+				<!--
+					
+				//-->
+			</script>
 		</head>
 		
 		<body>
@@ -19,9 +25,14 @@
 				<section>
 					<header><h2>Example 1</h2><header/>
 						<article>
-							<p></p>
-							<button onclick=""></button>
-							<div></div>
+							<p>Bellow is an output of all of the Jobs which are listed on gitHub.com.<br/>
+							By using XMLHTTPRequest and parsing the JSON received from their server, <br/>
+							I was able to build this table with all of the job information:<br/>
+							If you see something you are interested in go ahead and apply for it and good luck!</p>,<br/>
+							
+							<div id="status"></div>
+							<div onload="jobsTable()" id="jobsTable"></div>
+							<div id="jobsJSON"></div>
 						</article>
 					</section>
 				
