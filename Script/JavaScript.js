@@ -202,11 +202,11 @@ function createObject() {
 }
 
 function myFirstJSON() {
-	var x;
+	var i;
 	var tableJ = "<table border='1'>";
 	
-	for (x in objectJ) {
-		tableJ += "<tr><td>" + objectJ[x].firstname + "</td>" + "<td>" + objectJ[x].lastname + "</td>" + "<td>" + objectJ[x].phonenumber + "</td>" + "<td>" + objectJ[x].address + "</td></tr>";
+	for (i = 0; i < objectJ.length; i++) {
+		tableJ += "<tr><td>" + objectJ[i].firstname + "</td>" + "<td>" + objectJ[i].lastname + "</td>" + "<td>" + objectJ[i].phonenumber + "</td>" + "<td>" + objectJ[i].address + "</td></tr>";
 	}
 	tableJ += "</table>";
 	document.getElementById("tableJOutput").innerHTML = "<p>You have just used JSON stringify to turn the object that contains all of the data in this table into a JSON string.</p><br/>" + tableJ;
