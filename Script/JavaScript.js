@@ -8,6 +8,17 @@ list = [];
 var person = new Object();
 var place = new Object();
 var thing = new Object();
+var objectJ = {"contacts":[
+	{"firstname":"Matthew", "lastname":"Schaupp", "numbers":["number1":"7928739878", "number2":"7938748789"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Nathan", "lastname":"Schaupp", "numbers":["number1":"6988766878", "number2":"7898767898"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jonathan", "lastname":"Schaupp", "numbers":["number1":"3457657899", "number2":"4566549876"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jessica", "lastname":"Schaupp", "numbers":["number1":"87667887678", "number2":"23443223432"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Michael", "lastname":"Schaupp", "numbers":["number1":"98778998789", "number2":"23443223429"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ashley", "lastname":"Schaupp", "numbers":["number1":"98756754320", "number2":"2457650987"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ariana", "lastname":"Schaupp", "numbers":["number1":"6577659878", "number2":"5677655677"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Alivia", "lastname":"Schaupp", "numbers":["number1":"98777778987", "number2":"0987787899"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"}
+	]
+}
 
 
 //functions:
@@ -176,4 +187,22 @@ function createObject() {
 			document.getElementById('inherit').innerHTML = phone.name + "<br/><br/>Inherited Description: <br/>" + phone.description;
 	}
 }
+
+function myFirstJSON() {
+	var tableJ = "<table border='1'>";
+	
+	for (x in objectJ) {
+		tableJ += "<tr><td>" + objectJ[x].firstname + "</td>" + "<td>" + objectJ[x].lastname + "</td>" + "<td>" + objectJ[x].numbers[x].number1 + "</td>" + "<td>" + objectJ[x].numbers[1].number2 + "</td>" + "<td>" + objectJ[x].address + "</td></tr>";
+	}
+	tableJ += "</table>";
+	document.getElementById("tableJOutput").innerHTML = "<p>You have just used JSON stringify to turn the object that contains all of the data in this table into a JSON string.</p><br/>" + tableJ;
+	
+	var jsonObjectJ = JSON.stringify(objectJ);
+	
+	var stringifyOutput = "<p>This is what the JSON stringified object now looks like:</p><br/>" + jsonObjectJ;
+	
+	document.getElementById('stringifyOutput').innerHTML = stringifyOutput;
+	
+}
+
 
