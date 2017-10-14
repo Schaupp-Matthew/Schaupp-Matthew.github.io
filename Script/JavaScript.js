@@ -202,6 +202,7 @@ function createObject() {
 }
 
 function myFirstJSON() {
+	var x;
 	var tableJ = "<table border='1'>";
 	
 	for (x in objectJ) {
