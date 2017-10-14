@@ -10,26 +10,26 @@ var place = new Object();
 var thing = new Object();
 var objectJ = {"contacts":[
 	{"firstname":"<h3>First Name</h3>", "lastname":"<h3>Last Name</h3>", "phonenumber":"<h3>Phone Number</h3>", "address":"<h3>Address</h3>"},
-	{"firstname":"Matthew", "lastname":"Schaupp", "phonenumber":"7928739878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Nathan", "lastname":"Schaupp", "phonenumber":"6988766878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Jonathan", "lastname":"Schaupp", "phonenumber":"3457657899", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Jessica", "lastname":"Schaupp", "phonenumber":"87667887678", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Michael", "lastname":"Schaupp", "phonenumber":"98778998789", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Ashley", "lastname":"Schaupp", "phonenumber":"98756754320", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Ariana", "lastname":"Schaupp", "phonenumber":"6577659878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Alivia", "lastname":"Schaupp", "phonenumber":"98777778987", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"}
+	{"firstname":"Matthew", "lastname":"Smith", "phonenumber":"7928739878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Nathan", "lastname":"Smith", "phonenumber":"6988766878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jonathan", "lastname":"Smith", "phonenumber":"3457657899", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jessica", "lastname":"Smith", "phonenumber":"87667887678", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Michael", "lastname":"Smith", "phonenumber":"98778998789", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ashley", "lastname":"Smith", "phonenumber":"98756754320", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ariana", "lastname":"Smith", "phonenumber":"6577659878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Alivia", "lastname":"Smith", "phonenumber":"98777778987", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"}
 	]
 }
 
 /* var objectJ = {"contacts":[
-	{"firstname":"Matthew", "lastname":"Schaupp", "numbers":["7928739878", "7938748789"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Nathan", "lastname":"Schaupp", "numbers":["6988766878", "7898767898"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Jonathan", "lastname":"Schaupp", "numbers":["3457657899", "4566549876"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Jessica", "lastname":"Schaupp", "numbers":["87667887678", "23443223432"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Michael", "lastname":"Schaupp", "numbers":["98778998789", "23443223429"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Ashley", "lastname":"Schaupp", "numbers":["98756754320", "2457650987"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Ariana", "lastname":"Schaupp", "numbers":["6577659878", "5677655677"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Alivia", "lastname":"Schaupp", "numbers":["98777778987", "0987787899"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"}
+	{"firstname":"Matthew", "lastname":"Smith", "numbers":["7928739878", "7938748789"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Nathan", "lastname":"Smith", "numbers":["6988766878", "7898767898"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jonathan", "lastname":"Smith", "numbers":["3457657899", "4566549876"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jessica", "lastname":"Smith", "numbers":["87667887678", "23443223432"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Michael", "lastname":"Smith", "numbers":["98778998789", "23443223429"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ashley", "lastname":"Smith", "numbers":["98756754320", "2457650987"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ariana", "lastname":"Smith", "numbers":["6577659878", "5677655677"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Alivia", "lastname":"Smith", "numbers":["98777778987", "0987787899"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"}
 	]
 } */
 
