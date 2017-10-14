@@ -9,6 +9,19 @@ var person = new Object();
 var place = new Object();
 var thing = new Object();
 var objectJ = {"contacts":[
+	{"firstname":"<h3>First Name</h3>", "lastname":"<h3>Last Name</h3>", "phonenumber":"<h3>Phone Number</h3>", "address":"<h3>Address</h3>"},
+	{"firstname":"Matthew", "lastname":"Schaupp", "phonenumber":"7928739878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Nathan", "lastname":"Schaupp", "phonenumber":"6988766878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jonathan", "lastname":"Schaupp", "phonenumber":"3457657899", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jessica", "lastname":"Schaupp", "phonenumber":"87667887678", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Michael", "lastname":"Schaupp", "phonenumber":"98778998789", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ashley", "lastname":"Schaupp", "phonenumber":"98756754320", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ariana", "lastname":"Schaupp", "phonenumber":"6577659878", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Alivia", "lastname":"Schaupp", "phonenumber":"98777778987", "address":"8273 Imaginary Dr. Los Angeles, CA 98764"}
+	]
+}
+
+/* var objectJ = {"contacts":[
 	{"firstname":"Matthew", "lastname":"Schaupp", "numbers":["7928739878", "7938748789"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
 	{"firstname":"Nathan", "lastname":"Schaupp", "numbers":["6988766878", "7898767898"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
 	{"firstname":"Jonathan", "lastname":"Schaupp", "numbers":["3457657899", "4566549876"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
@@ -18,7 +31,7 @@ var objectJ = {"contacts":[
 	{"firstname":"Ariana", "lastname":"Schaupp", "numbers":["6577659878", "5677655677"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
 	{"firstname":"Alivia", "lastname":"Schaupp", "numbers":["98777778987", "0987787899"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"}
 	]
-}
+} */
 
 
 //functions:
@@ -192,7 +205,7 @@ function myFirstJSON() {
 	var tableJ = "<table border='1'>";
 	
 	for (x in objectJ) {
-		tableJ += "<tr><td>" + objectJ[x].firstname + "</td>" + "<td>" + objectJ[x].lastname + "</td>" + "<td>" + objectJ[x].numbers[x] + "</td>" + "<td>" + objectJ[x].numbers[1] + "</td>" + "<td>" + objectJ[x].address + "</td></tr>";
+		tableJ += "<tr><td>" + objectJ[x].firstname + "</td>" + "<td>" + objectJ[x].lastname + "</td>" + "<td>" + objectJ[x].phonenumber + "</td>" + "<td>" + objectJ[x].address + "</td></tr>";
 	}
 	tableJ += "</table>";
 	document.getElementById("tableJOutput").innerHTML = "<p>You have just used JSON stringify to turn the object that contains all of the data in this table into a JSON string.</p><br/>" + tableJ;
