@@ -227,6 +227,6 @@ function myFirstParse() {
 	var message = "Now the JSON string with the objects data has been turned back into an object which can be used again";
 	document.getElementById('message').innerHTML = message;
 	
-	var example = "For example" + parseObjectJ.objectJ.contacts[3].firstname + "'s" + " phone number is " + parseObjectJ.objectJ.contacts[3].phonenumber + ".";
+	var example = "For example" + parseObjectJ.contacts[3].firstname + "'s" + " phone number is " + parseObjectJ.contacts[3].phonenumber + ".";
 	document.getElementById('example').innerHTML = example;
 }
