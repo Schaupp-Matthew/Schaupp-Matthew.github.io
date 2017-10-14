@@ -25,9 +25,9 @@
 				<section>
 					<header><h2>Stringify</h2><header/>
 						<article>
-							<p>In this section, I create an object which is then stringified through JSON so it can be sent to a server.</p>
-							<p>This is what the object looks like in JavaScript:</p><br/>
-							<div id="initialObject" onload="initialObject()"></div>
+							<p>In this section, I create an object which is then stringified through JSON so it can be sent to a server. <br/>
+							The information from the object is displayed in a table and then the object is stringified.  <br/>
+							Then the stringified object is displayed so you can see what it looks like.</p>
 							<button onclick="myFirstJSON()">JSON Stringify</button>
 							<div id="tableJOutput"></div>
 							<br />
@@ -38,9 +38,12 @@
 				<section>
 					<header><h2>JSON Parse</h2><header/>
 						<article>
-							<p></p>
-							<button onclick=""></button>
-							<div></div>
+							<p>Now that we have the above object stringified.  We can use the JSON parse function in order to turn it <br/>
+							back into an usable JavaScript object.  This is what we would use to be able to use the JSON data we would receive <br/>
+							from a JSON web service.</p>
+							<button onclick="myFirstParse()">JSON Parse</button>
+							<div id="message"></div>
+							<div id="example"></div>
 						</article>
 					</section>
 					

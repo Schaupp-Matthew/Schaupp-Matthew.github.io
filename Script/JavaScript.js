@@ -5,6 +5,8 @@
 tableArray = [];
 list = [];
 
+var jsonObjectJ;
+
 var person = new Object();
 var place = new Object();
 var thing = new Object();
@@ -211,7 +213,7 @@ function myFirstJSON() {
 	tableJ += "</table>";
 	document.getElementById("tableJOutput").innerHTML = "<p>You have just used JSON stringify to turn the object that contains all of the data in this table into a JSON string.</p><br/>" + tableJ;
 	
-	var jsonObjectJ = JSON.stringify(objectJ);
+	jsonObjectJ = JSON.stringify(objectJ);
 	
 	var stringifyOutput = "<p>This is what the JSON stringified object now looks like:</p><br/>" + jsonObjectJ;
 	
@@ -219,7 +221,12 @@ function myFirstJSON() {
 	
 }
 
-function initialObject() {
-	var initialObject = objectJ.contacts.toString();
-	document.getElementById('initialObject').innerHTML = initialObject;
+function myFirstParse() {
+	var parseObjectJ = JSON.parse(jsonObjectJ);
+	
+	var message = "Now the JSON string with the objects data has been turned back into an object which can be used again";
+	document.getElementById('message').innerHTML = message;
+	
+	var example = "For example" + parseObjectJ.objectJ.contacts[3].firstname + "'s" + " phone number is " + parseObjectJ.objectJ.contacts[3].phonenumber + ".";
+	document.getElementById('example').innerHTML = example;
 }
