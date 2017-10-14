@@ -9,14 +9,14 @@ var person = new Object();
 var place = new Object();
 var thing = new Object();
 var objectJ = {"contacts":[
-	{"firstname":"Matthew", "lastname":"Schaupp", "numbers":["number1":"7928739878", "number2":"7938748789"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Nathan", "lastname":"Schaupp", "numbers":["number1":"6988766878", "number2":"7898767898"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Jonathan", "lastname":"Schaupp", "numbers":["number1":"3457657899", "number2":"4566549876"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Jessica", "lastname":"Schaupp", "numbers":["number1":"87667887678", "number2":"23443223432"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Michael", "lastname":"Schaupp", "numbers":["number1":"98778998789", "number2":"23443223429"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Ashley", "lastname":"Schaupp", "numbers":["number1":"98756754320", "number2":"2457650987"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Ariana", "lastname":"Schaupp", "numbers":["number1":"6577659878", "number2":"5677655677"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Alivia", "lastname":"Schaupp", "numbers":["number1":"98777778987", "number2":"0987787899"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"}
+	{"firstname":"Matthew", "lastname":"Schaupp", "numbers":["7928739878", "7938748789"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Nathan", "lastname":"Schaupp", "numbers":["6988766878", "7898767898"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jonathan", "lastname":"Schaupp", "numbers":["3457657899", "4566549876"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Jessica", "lastname":"Schaupp", "numbers":["87667887678", "23443223432"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Michael", "lastname":"Schaupp", "numbers":["98778998789", "23443223429"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ashley", "lastname":"Schaupp", "numbers":["98756754320", "2457650987"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Ariana", "lastname":"Schaupp", "numbers":["6577659878", "5677655677"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
+	{"firstname":"Alivia", "lastname":"Schaupp", "numbers":["98777778987", "0987787899"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"}
 	]
 }
 
