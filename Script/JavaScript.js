@@ -205,7 +205,7 @@ function myFirstJSON() {
 	var i;
 	var tableJ = "<table border='1'>";
 	
-	for (i = 0; i < objectJ.length; i++) {
+	for (i = 0; i < objectJ.contacts.length; i++) {
 		tableJ += "<tr><td>" + objectJ[i].firstname + "</td>" + "<td>" + objectJ[i].lastname + "</td>" + "<td>" + objectJ[i].phonenumber + "</td>" + "<td>" + objectJ[i].address + "</td></tr>";
 	}
 	tableJ += "</table>";
