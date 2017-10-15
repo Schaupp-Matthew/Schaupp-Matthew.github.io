@@ -231,33 +231,23 @@ function myFirstParse() {
 	document.getElementById('example').innerHTML = example;
 }
 
-function jobsTable() {
-	var jobsData = new XMLHttpRequest();
-	jobsData.onreadystatechange = function() {
+function dadJokes() {
+	var dadJokes = new XMLHttpRequest();
+	dadJokes.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
-			var jobsJSON = JSON.parse(this.responseText);
+			var jokesJSON = JSON.parse(this.responseText);
 			var status = this.statusText;
 			document.getElementById('status').innerHTML = status;
-			document.getElementById('jobsJSON').innerHTML = jobsJSON.joke;
-			buildTable(jobsJSON);
+			document.getElementById('jokesJSON').innerHTML = jokesJSON.joke;
 		}
 		else {
 			var status = this.statusText;
 			document.getElementById('status').innerHTML = status;
 		}
 	};
-	jobsData.open("GET", "https://icanhazdadjoke.com/", true);
-	jobsData.setRequestHeader("Accept", "application/json");
-	jobsData.send();
+	dadJokes.open("GET", "https://icanhazdadjoke.com/", true);
+	dadJokes.setRequestHeader("Accept", "application/json");
+	dadJokes.send();
 }
 
-function buildTable(j) {
-	/* var x;
-	var table = "<table border='1'>";
-	
-	for (x in j.) {
-		tableJ += "<tr><td>" + objectJ.contacts[i].firstname + "</td>" + "<td>" + objectJ.contacts[i].lastname + "</td>" + "<td>" + objectJ.contacts[i].phonenumber + "</td>" + "<td>" + objectJ.contacts[i].address + "</td></tr>";
-	}
-	tableJ += "</table>";
-	document.getElementById("tableJOutput").innerHTML = "<p>You have just used JSON stringify to turn the object that contains all of the data in this table into a JSON string.</p><br/>" + tableJ; */
-}
+
