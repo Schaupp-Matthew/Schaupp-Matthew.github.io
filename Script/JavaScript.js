@@ -247,7 +247,7 @@ function jobsTable() {
 		}
 	};
 	jobsData.open("GET", "https://icanhazdadjoke.com/", true);
-	xhttp.setRequestHeader("Accept", "application/json");
+	jobsData.setRequestHeader("Accept", "application/json");
 	jobsData.send();
 }
 
