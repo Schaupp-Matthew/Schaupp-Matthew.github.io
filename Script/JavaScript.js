@@ -238,7 +238,7 @@ function jobsTable() {
 			var jobsJSON = JSON.parse(this.responseText);
 			var status = this.statusText;
 			document.getElementById('status').innerHTML = status;
-			document.getElementById('jobsJSON').innerHTML = jobsJSON;
+			document.getElementById('jobsJSON').innerHTML = jobsJSON.joke;
 			buildTable(jobsJSON);
 		}
 		else {
