@@ -246,7 +246,7 @@ function jobsTable() {
 			document.getElementById('status').innerHTML = status;
 		}
 	};
-	jobsData.open("GET", "https://jobs.github.com/positions.json?description=python&location=sf&full_time=true", true);
+	jobsData.open("GET", "http://jobs.github.com/positions.json", true);
 	jobsData.send();
 }
 
