@@ -246,7 +246,7 @@ function jobsTable() {
 			document.getElementById('status').innerHTML = status;
 		}
 	};
-	jobsData.open("GET", "http://jobs.github.com/positions.json", true);
+	jobsData.open("GET", "https://api.usa.gov/jobs/search.json", true);
 	jobsData.send();
 }
 
