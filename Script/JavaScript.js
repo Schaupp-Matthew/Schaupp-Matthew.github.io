@@ -184,7 +184,7 @@ function createObject() {
 			document.getElementById('output').innerHTML = output;
 			
 		var durban = Object.create(place);
-			durban.name = "Durban, South Africa is down here not!"; 
+			durban.name = "Durban, South Africa is down here!"; 
 			document.getElementById('inherit').innerHTML = durban.name + "<br/><br/>Inherited Description: <br/>" + durban.description;
 	}
 	else if (x == "Thing") {
