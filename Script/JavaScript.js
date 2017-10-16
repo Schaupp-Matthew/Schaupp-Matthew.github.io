@@ -257,7 +257,7 @@ function getLocalStorage() {
 	var x, output;
 	var tableObject = localStorage.getItem("tableObject");
 	var objectK = JSON.parse(tableObject);
-	for (x in objectK) {
+	for (x = 0; x < objectK.contacts.length; x++) {
 		document.write(this.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address);
 		//output = objectK.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address;
 		//document.getElementById('localStorage').innerHTML = output;
