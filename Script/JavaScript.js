@@ -258,13 +258,12 @@ function getLocalStorage() {
 	var someData = localStorage.getItem("tableObject");
 	var objectK = JSON.parse(someData);
 	//document.write(objectK);
-	for (x = 0; x < objectK.contacts.length; x++) {
+	for (x = 1; x < objectK.contacts.length; x++) {
 		//document.write(x);
 		//document.write(objectK.contacts[x].address);
 		//document.write(objectK.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address);
 		output += objectK.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address;
-		output += "<br />" + "End of all of the information that was stored in localStorage." 
-		document.getElementById('localStorage').innerHTML = output;
+		document.getElementById('localStorage').innerHTML = output + "<br />" + "End of all of the information that was stored in localStorage.";
 	}
 	//document.write("<br />" + "End of all of the information that was stored in localStorage.");
 }
