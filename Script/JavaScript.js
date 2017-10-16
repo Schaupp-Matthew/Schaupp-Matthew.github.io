@@ -215,6 +215,8 @@ function myFirstJSON() {
 	
 	jsonObjectJ = JSON.stringify(objectJ);
 	
+	localStorage.setItem("tableObject", jsonObjectJ);
+	
 	var stringifyOutput = "<p>This is what the JSON stringified object now looks like:</p><br/>" + jsonObjectJ;
 	
 	document.getElementById('stringifyOutput').innerHTML = stringifyOutput;
@@ -250,4 +252,13 @@ function dadJokes() {
 	dadJokes.send();
 }
 
-
+function getLocalStorage() {
+	
+	var x;
+	var tableObject = localStorage.getItem("tableObject");
+	var objectK = JSON.parse(tableObject);
+	for (x in objectK) {
+		document.write(objectK.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address);
+		document.write("<br />" + "End of all of the information that was stored in localStorage.");
+	}
+}

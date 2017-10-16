@@ -26,16 +26,18 @@ text = localStorage.getItem("testJSON");
 obj = JSON.parse(text);
 document.getElementById("demo").innerHTML = obj.name; -->
 				
-				<section>
-					<header><h2>Local Storage API</h2><header/>
+					<section>
+					<header><h2>Accessing and using local storage</h2><header/>
 						<article>
-							<p></p>
-							<button onclick=""></button>
-							<div></div>
+							<p>On the page for subject 3: "JSON Parse, Stringify" an object is created and then turned into 
+							a string using JSON stringify.  This string was then stored in local storage and will now be retrieved
+							here to be used to output some of the data from the stored object as follows:</p>
+							<button onclick="getLocalStorage()">Get Object from Local Storage</button>
+							<!-- <div id="localStorage"></div> -->
 						</article>
 					</section>
 					
-					<section>
+					<!-- <section>
 						<header><h2>Storing and Retrieving Simple Data</h2><header/>
 							<article>
 								<p></p>
@@ -69,6 +71,6 @@ document.getElementById("demo").innerHTML = obj.name; -->
 								<button onclick=""></button>
 								<div></div>
 							</article>
-					</section>
+					</section> -->
 		</body>
 	</html>
