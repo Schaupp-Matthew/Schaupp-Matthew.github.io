@@ -255,12 +255,14 @@ function dadJokes() {
 function getLocalStorage() {
 	
 	var x, output;
-	var tableObject = localStorage.getItem("tableObject");
+	var someData = localStorage.getItem("tableObject");
 	var objectK = JSON.parse(tableObject);
+	document.write(objectK);
 	for (x = 0; x < objectK.contacts.length; x++) {
-		document.write(x);
-		//document.write(this.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address);
-		//output = objectK.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address;
+		//document.write(x);
+		document.write(localStorage.getItem(tableObject.contacts[3].firstname);
+		//document.write(objectK.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address);
+		//output += objectK.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address;
 		//document.getElementById('localStorage').innerHTML = output;
 	}
 	document.write("<br />" + "End of all of the information that was stored in localStorage.");
