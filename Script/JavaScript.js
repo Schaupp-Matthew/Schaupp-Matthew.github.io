@@ -263,7 +263,7 @@ function getLocalStorage() {
 		document.write(objectK.contacts[x].address);
 		//document.write(objectK.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address);
 		output += objectK.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address;
-		//document.getElementById('localStorage').innerHTML = output;
+		document.getElementById('localStorage').innerHTML = output;
 	}
 	document.write("<br />" + "End of all of the information that was stored in localStorage.");
 }
