@@ -3,10 +3,24 @@ body {
 	font-size: 90%;
 	color: #666666;
 	background-color: #f8f8f8;
+	margin: auto;
 }
 
 section {
 	background-color: #b7c8d9;
+	margin: auto;
+}
+
+article {
+	margin: auto;
+}
+
+p {
+	margin: auto;
+	text-align: center;
+}
+
+h3 {
 }
 
 nav {
@@ -15,12 +29,18 @@ nav {
 
 div {
 	background-color: #b7c8d9;
+	margin: auto;
 }
 
 header {
-	text-align: left;
+	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
+	margin: auto;
+}
+
+ol {
+	margin: auto;
 }
 
 li {
@@ -30,6 +50,7 @@ li {
 
 table {
 	border-spacing: 0px;
+	margin: auto;
 }
 
 td {
@@ -65,9 +86,11 @@ th {
 fieldset {
 	width: 90%;
 	margin-top: 20px;
+	margin: auto;
 	border: 1px solid #d6d6d6;
 	background-color: #ffffff;
 	line-height: 1.6em;
+	text-align: center;
 }
 
 input[type="text"] {

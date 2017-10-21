@@ -7,16 +7,27 @@
 			<meta name="description" content="CIT 261 Sandbox">
 			<meta name="Matt" content="CIT 261">
 			<title>CIT 261 Sandbox Pages</title>
-			<style type="text/css"></style>
+			<!--For website:-->
+			<link href="/Style/styleSheet.css" type="text/css" rel="stylesheet" />
+			
+			<script language="javascript" type="text/javascript" src="/Script/JavaScript.js">
+				
+			</script>
+			
+			<!--For Development:-->
+			<!-- <link href="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Style/styleSheet.css" type="text/css" rel="stylesheet" />
+			
+			<script language="javascript" type="text/javascript" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Script/JavaScript.js">
+				
+			</script> -->
 		</head>
 		
 		<body>
-			<div class="wrapper"></div>
-				<header>
-					<h1>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</h1>
-				</header>
+			<header>
+				<h1>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</h1>
+			</header>
 				
-				<section>
+				<!-- <section>
 					<header><h2>DOM Manipulation Using createElement</h2><header/>
 						<article>
 							<p></p>
@@ -59,6 +70,34 @@
 								<button onclick=""></button>
 								<div></div>
 							</article>
-					</section>
+					</section> -->
+					
+			<header>
+				<h2>Short-Story Application</h2>
+			</header>
+			
+			<section>
+				<p>Instructions:  Use the below inputs and button in order to create your short-story
+				on this web page.  When you are done, you can print it out and have it forever.</p>
+				
+				<fieldset id="inputfield">
+					<input type="text" id="title" placeholder="Tile" autocomplete="on" autofocus></input>
+					<button type="button" id="titleButton" onclick="addTitle()">Add Title</button>
+					<textarea type="text" id="paragraph" placeholder="Paragraph" autofocus></textarea>
+					<button type="button" id="paragraphButton" onclick="addParagraph()">Add Paragraph</button>
+					<label>Select Item</label>
+						<select id="selectItem">
+						
+						</select>
+					<button type="button" id="removeButton" onclick="removeItem()">Remove Item</buton>
+				</fieldset>
+			</section>
+			
+			<section>
+				<div id="output">
+				
+				
+				</div>
+			</section>
 		</body>
 	</html>

@@ -1,4 +1,5 @@
 //Global variables:
+var pCount = 1;
 
 
 //Global objects:
@@ -75,7 +76,7 @@ if (guess == answer){
 
 function addRow() {
 	
-	var t = document.getElementById('timeDate').value;
+	//var t = document.getElementById('timeDate').value;
 	var f = document.getElementById('feeding').value;
 	var a = document.getElementById('amount').value;
 	var b = document.getElementById('bm').value;
@@ -84,7 +85,8 @@ function addRow() {
 	//document.getElementById('tableOutput').innerHTML = t;
 	
 	var row = new Object();
-		row.timeDate = t;
+		//row.timeDate = t;
+		row.timeDate = Date();
 		row.feeding = f;
 		row.amount = a;
 		row.bm = b;
@@ -111,7 +113,7 @@ function addItem() {
 	list.splice(0, 0, add);
 }
 
-function removeItem() {
+function removeRow() {
 	var x = list.pop();
 	document.getElementById('list').innerHTML = x + " was removed from the list.";
 }
@@ -268,3 +270,59 @@ function getLocalStorage() {
 	}
 	//document.write("<br />" + "End of all of the information that was stored in localStorage.");
 }
+
+function addTitle(){
+	var heading = document.createElement("h2");
+	var title = document.createTextNode(document.getElementById('title').value);
+	heading.appendChild(title);
+	document.getElementById('output').appendChild(heading);
+}
+
+function addParagraph () {
+	var p = document.createElement("p");
+	var br = document.createElement("br");
+	p.id = "Paragraph" + pCount;
+	var paragraph = document.createTextNode(document.getElementById('paragraph').value);
+	p.appendChild(paragraph);
+	document.getElementById('output').appendChild(p);
+	document.getElementById('output').appendChild(br);
+	
+	var option = document.createElement("option");
+	option.value = "Paragraph" + pCount;
+	option.id = "Paragraph" + pCount;
+	option.appendChild(document.createTextNode("Paragraph " + pCount));
+	document.getElementById('selectItem').appendChild(option);
+	
+	pCount++;
+}
+
+function removeItem() {
+	
+	//Remove option
+	var id = document.getElementById('selectItem').value;
+	//id = document.getElementById('selectItem').id;
+	//document.write(id);
+	var elementOption = document.getElementById(id);
+	document.getElementById('selectItem').removeChild(elementOption);
+	
+	//Renumber options and paragraphs
+	/* pCount = 1;
+	
+	var select = document.getElementById('selectItem');
+	var i;
+	do {
+		
+		i++;
+	} while (i < select.length);
+	document.write(i); */
+	
+	//Remove paragraph
+	var elementParagraph = document.getElementById(id);
+	var whiteSpace = elementParagraph.nextSibling;
+	//document.write(whiteSpace);
+	document.getElementById('output').removeChild(whiteSpace);
+	document.getElementById('output').removeChild(elementParagraph);
+		
+	//pCount--;
+}
+
