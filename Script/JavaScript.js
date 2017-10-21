@@ -271,11 +271,11 @@ function getLocalStorage() {
 	//document.write("<br />" + "End of all of the information that was stored in localStorage.");
 }
 
-<<<<<<< HEAD
+/* <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
->>>>>>> 43bd9a51d38b129b9d17be0b6cc6fa0084d0f096
+>>>>>>> 43bd9a51d38b129b9d17be0b6cc6fa0084d0f096 */
 function addTitle(){
 	var heading = document.createElement("h2");
 	var title = document.createTextNode(document.getElementById('title').value);
@@ -330,8 +330,8 @@ function removeItem() {
 		
 	//pCount--;
 }
-<<<<<<< HEAD
+/* <<<<<<< HEAD
 >>>>>>> 43bd9a51d38b129b9d17be0b6cc6fa0084d0f096
 =======
->>>>>>> 43bd9a51d38b129b9d17be0b6cc6fa0084d0f096
+>>>>>>> 43bd9a51d38b129b9d17be0b6cc6fa0084d0f096 */
 
