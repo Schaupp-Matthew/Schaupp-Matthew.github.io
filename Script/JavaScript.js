@@ -113,7 +113,7 @@ function addItem() {
 	list.splice(0, 0, add);
 }
 
-function removeRow() {
+function removeI() {
 	var x = list.pop();
 	document.getElementById('list').innerHTML = x + " was removed from the list.";
 }
