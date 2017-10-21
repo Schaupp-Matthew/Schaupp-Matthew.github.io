@@ -1,5 +1,6 @@
 //Global variables:
 var pCount = 1;
+var classCount = 1;
 
 
 //Global objects:
@@ -333,5 +334,69 @@ function removeItem() {
 /* <<<<<<< HEAD
 >>>>>>> 43bd9a51d38b129b9d17be0b6cc6fa0084d0f096
 =======
->>>>>>> 43bd9a51d38b129b9d17be0b6cc6fa0084d0f096 */
+>>>>>>> 43bd9a51d38b129b9d17be0b6cc6fa0084d0f096 
+
+
+<body class="">
+				<header class="">
+					<h1>Manipulating CSS Class Properties Using JavaScript</h1>
+				</header>
+				
+				<h2 class="">Examples:</h2>
+					<p class="">Every element of this web page can be manipulated using JavaScript.  Try to find and click on every element within the body of this page to completely change it.</p>
+					<button onclick="changeClass()" class="">BUTTON</button>
+				<div class="">This is a div.</div>
+				<canvas class="" style="border:1px solid #000000"></canvas>
+		</body>*/
+
+function changeClass() {
+	if (classCount == 4) {
+		classCount = 1;
+	}
+	
+	var body = document.getElementById('BODY');
+	//var bodyJ = JSON.stringify(body);
+	//document.write(bodyJ);
+	var header = document.getElementById('HEADER');
+	var h2 = document.getElementById('H2');
+	var paragraph = document.getElementById('P');
+	var button = document.getElementById('BUTTON');
+	var div = document.getElementById('DIV');
+	var canvas = document.getElementById('CANVAS');
+	var c = canvas.getContext("2d");
+	
+	if (classCount == 1) {
+		body.className = "class1";
+		header.className = "class1";
+		h2.className = "class1";
+		paragraph.className = "class1";
+		button.className = "class1";
+		div.className = "class1";
+		c.fillStyle = "#ff0000";
+		c.fillRect(100, 100, 100, 100);
+	}
+	else if (classCount == 2) {
+		body.className = "class2";
+		header.className = "class2";
+		h2.className = "class2";
+		paragraph.className = "class2";
+		button.className = "class2";
+		div.className = "class2";
+		c.fillStyle = "#cc33ff";
+		c.fillRect(50, 50, 250, 500);
+	}
+	else {
+		body.className = "class3";
+		header.className = "class3";
+		h2.className = "class3";
+		paragraph.className = "class3";
+		button.className = "class3";
+		div.className = "class3";
+		c.fillStyle = "#0099cc";
+		c.fillRect(0, 0, 300, 300);
+	}
+	
+	classCount++;
+	//document.write(classCount);
+}
 
