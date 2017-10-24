@@ -1,6 +1,8 @@
 //Global variables:
 var pCount = 1;
 var classCount = 1;
+var transitionCount = 1;
+var aniCount = 1;
 
 
 //Global objects:
@@ -400,3 +402,45 @@ function changeClass() {
 	//document.write(classCount);
 }
 
+//growBox('transition1', '700px', '350px', '#ffcc00', 'rotate(180deg)')
+function growBox(id, width, height, color, transform) {
+	var box1 = document.getElementById(id);
+	
+	if (transitionCount ==3) {
+		transitionCount = 1;
+	}
+	
+	if (transitionCount == 1){
+		//box1.style.transition = "width 2s, height 2s, background-color 2s, transform 2s";
+		box1.style.width = width;
+		box1.style.height = height;
+		box1.style.background = color;
+		box1.style.transform = transform;
+	}
+	else {
+		//box1.style.transition = "width 2s, height 2s, background-color 2s, transform 2s";
+		box1.style.width = '50px';
+		box1.style.height = '50px';
+		box1.style.background = 'blue';
+		box1.style.transform = transform;
+	}
+	
+	transitionCount++;
+}
+
+function runBox(id) {
+	var box2 = document.getElementById(id);
+	
+	if (aniCount ==3) {
+		aniCount = 1;
+	}
+	
+	if (aniCount == 1) {
+	box2.className = "div3";
+	}
+	else {
+		box2.className = "div2";
+	}
+	
+	aniCount++;
+}

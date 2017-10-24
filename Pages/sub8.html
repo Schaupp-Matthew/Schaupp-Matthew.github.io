@@ -7,31 +7,49 @@
 			<meta name="description" content="CIT 261 Sandbox">
 			<meta name="Matt" content="CIT 261">
 			<title>CIT 261 Sandbox Pages</title>
-			<style type="text/css"></style>
+			<!--For website:-->
+			<link href="/Style/styleSheet.css" type="text/css" rel="stylesheet" />
+			
+			<script language="javascript" type="text/javascript" src="/Script/JavaScript.js">
+				
+			</script>
+			
+			<!--For Development:-->
+			<!-- <link href="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Style/styleSheet.css" type="text/css" rel="stylesheet" />
+			
+			<script language="javascript" type="text/javascript" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Script/JavaScript.js">
+				
+			</script> -->
 		</head>
 		
 		<body>
-			<div class="wrapper"></div>
-				<header>
-					<h1>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h1>
-				</header>
-				
-				<section>
-					<header><h2>Transitions</h2><header/>
-						<article>
-							<p></p>
-							<button onclick=""></button>
-							<div></div>
-						</article>
-				</section>
-				
-				<section>
-					<header><h2>Animations</h2><header/>
-						<article>
-							<p></p>
-							<button onclick=""></button>
-							<div></div>
-						</article>
-				</section>
-		</body>
+			
+			<header>
+				<h1>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h1>
+			</header>
+			
+			<section>
+				<header><h2>Transitions</h2><header/>
+					<article>
+						<p></p>
+						<br/>
+						<button onclick=""></button>
+						<br/>
+						<div class="container"><div id="transition1" class="div1" onmouseover="growBox('transition1', '700px', '350px', '#ffcc00', 'rotate(180deg)')"></div></div>
+						<br/>
+					</article>
+			</section>
+			
+			<section>
+				<header><h2>Animations</h2><header/>
+					<article>
+						<p></p>
+						<br/>
+						<button onclick=""></button>
+						<br/>
+						<div class="container"><div id="animation1" class="div2" onmouseover="runBox('animation1')"></div></div>
+						<br/>
+					</article>
+			</section>
+	</body>
 	</html>
