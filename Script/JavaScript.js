@@ -3,6 +3,7 @@ var pCount = 1;
 var classCount = 1;
 var transitionCount = 1;
 var aniCount = 1;
+var warnCount = 1;
 
 
 //Global objects:
@@ -444,3 +445,54 @@ function runBox(id) {
 	
 	aniCount++;
 }
+
+function showWarning() {
+	if (warnCount == 3) {
+		warnCount = 1;
+	}
+	
+	if (warnCount == 1) {
+	alert("Please be patient while all of the elements on this page load");
+	}
+	else {
+		alert("The page is fully loaded.  Thank you for your patients during this demonstration!");
+	}
+	
+	warnCount++;
+}
+
+function addHeading() {
+	var heading = document.createElement("h2");
+	//heading.id = "heading";
+	var title = document.createTextNode("This Page Shows How to Use Events");
+	heading.appendChild(title);
+	document.getElementById('container').appendChild(heading);
+}
+
+function addNote() {
+	var note = document.createElement("p");
+	//note.id = "note";
+	var text = document.createTextNode("Below you will have the will experience several different JavaScript Events like onload, onTouch, etc.");
+	note.appendChild(text);
+	document.getElementById('container').appendChild(note);
+}
+
+function addDiv() {
+	var div = document.createElement("div");
+	var text = document.createTextNode("THIS IS A DIV ELEMENT");
+	div.appendChild(text);
+	div.style.color = "blue";
+	div.style.width = "500px";
+	div.style.height = "500px"
+	document.getElementById('container').appendChild(div);
+}
+
+function addImage() {
+	var image = document.createElement("img");
+	image.src = "/Media/mindBlown.PNG";
+	//image.src = "/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/mindBlown.png";
+	image.align = "middle";
+	document.getElementById('container').appendChild(image);
+	showWarning();
+}
+

@@ -29,13 +29,19 @@
 			</script> -->
 		</head>
 		
-		<body>
+		<body onload="showWarning()">
 			<div class="wrapper"></div>
 				<header>
 					<h1>Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events</h1>
 				</header>
 				
-				<section>
+				<p>Please wait while the different elements on this page load at specified intervals!</p>
+				
+				<div id="container">
+				
+				</div>
+				
+				<!-- <section>
 						<header><h2>onTouchBegin</h2><header/>
 							<article>
 								<p></p>
@@ -69,6 +75,28 @@
 								<button onclick=""></button>
 								<div></div>
 							</article>
-					</section>
+					</section> -->
+		
+		
+		<script>
+			setTimeout(function(){
+				addHeading();
+			}, 2000);
+		</script>
+		<script>
+			setTimeout(function(){
+				addNote();
+			}, 4000);
+		</script>
+		<script>
+			setTimeout(function(){
+				addDiv();
+			}, 6000);
+		</script>
+		<script>
+			setTimeout(function(){
+				addImage();
+			}, 8000);
+		</script>
 		</body>
 	</html>

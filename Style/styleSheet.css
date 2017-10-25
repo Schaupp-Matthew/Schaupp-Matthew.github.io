@@ -227,3 +227,10 @@ input[type="text"]:hover {
     100% {background-color:red; left:-325px; top:0px;}
 }
 
+#container {
+	border: 5px black solid;
+	background-color: #f2f2f2;
+	width: 80%;
+	height: auto;
+}
+
