@@ -402,8 +402,6 @@ function changeClass() {
 	//document.write(classCount);
 }
 
-
-
 //growBox('transition1', '700px', '350px', '#ffcc00', 'rotate(180deg)')
 function growBox(id, width, height, color, transform) {
 	var box1 = document.getElementById(id);
