@@ -449,10 +449,10 @@ function addDiv2() {
 function addImage() {
 	var image = document.createElement("img");
 	var image2 = document.createElement("img");
-	//image.src = "/Media/mindBlown.PNG";
-	//image.src = "/Media/smiley.PNG";
-	image.src = "/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/mindBlown.png";
-	image2.src = "/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/smiley.png";
+	image.src = "/Media/mindBlown.PNG";
+	image.src = "/Media/smiley.PNG";
+	//image.src = "/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/mindBlown.png";
+	//image2.src = "/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/smiley.png";
 	image2.id = "smiley";
 	image.id = "mindBlown";
 	image.className = "mindBlown";
