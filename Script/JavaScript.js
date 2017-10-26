@@ -7,8 +7,9 @@ var warnCount = 1;
 
 
 //Global objects:
-tableArray = [];
-list = [];
+var tableArray = [];
+var list = [];
+var colorArray = ["red", "blue", "green", "yellow", "orange"];
 
 var jsonObjectJ;
 
@@ -28,20 +29,9 @@ var objectJ = {"contacts":[
 	]
 }
 
-/* var objectJ = {"contacts":[
-	{"firstname":"Matthew", "lastname":"Smith", "numbers":["7928739878", "7938748789"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Nathan", "lastname":"Smith", "numbers":["6988766878", "7898767898"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Jonathan", "lastname":"Smith", "numbers":["3457657899", "4566549876"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Jessica", "lastname":"Smith", "numbers":["87667887678", "23443223432"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Michael", "lastname":"Smith", "numbers":["98778998789", "23443223429"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Ashley", "lastname":"Smith", "numbers":["98756754320", "2457650987"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Ariana", "lastname":"Smith", "numbers":["6577659878", "5677655677"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"},
-	{"firstname":"Alivia", "lastname":"Smith", "numbers":["98777778987", "0987787899"], "address":"8273 Imaginary Dr. Los Angeles, CA 98764"}
-	]
-} */
-
-
 //functions:
+
+//Page1:
 function numGame() {
 	var a = Math.floor((Math.random()*100)+1);
 	var g;
@@ -263,23 +253,12 @@ function getLocalStorage() {
 	var x, output;
 	var someData = localStorage.getItem("tableObject");
 	var objectK = JSON.parse(someData);
-	//document.write(objectK);
-	//for (x = 0; x < objectK.contacts.length; x++) {
 	for (x in objectK.contacts) {
-		//document.write(x);
-		//document.write(objectK.contacts[x].address);
-		//document.write(objectK.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address);
 		output += objectK.contacts[x].firstname + " / " + objectK.contacts[x].lastname + " / " + objectK.contacts[x].phonenumber + " / " + objectK.contacts[x].address + "<br />";
 		document.getElementById('localStorage').innerHTML = output + "<br />" + "End of all of the information that was stored in localStorage.";
 	}
-	//document.write("<br />" + "End of all of the information that was stored in localStorage.");
 }
 
-/* <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43bd9a51d38b129b9d17be0b6cc6fa0084d0f096 */
 function addTitle(){
 	var heading = document.createElement("h2");
 	var title = document.createTextNode(document.getElementById('title').value);
@@ -309,48 +288,15 @@ function removeItem() {
 	
 	//Remove option
 	var id = document.getElementById('selectItem').value;
-	//id = document.getElementById('selectItem').id;
-	//document.write(id);
 	var elementOption = document.getElementById(id);
 	document.getElementById('selectItem').removeChild(elementOption);
-	
-	//Renumber options and paragraphs
-	/* pCount = 1;
-	
-	var select = document.getElementById('selectItem');
-	var i;
-	do {
-		
-		i++;
-	} while (i < select.length);
-	document.write(i); */
 	
 	//Remove paragraph
 	var elementParagraph = document.getElementById(id);
 	var whiteSpace = elementParagraph.nextSibling;
-	//document.write(whiteSpace);
 	document.getElementById('output').removeChild(whiteSpace);
 	document.getElementById('output').removeChild(elementParagraph);
-		
-	//pCount--;
 }
-/* <<<<<<< HEAD
->>>>>>> 43bd9a51d38b129b9d17be0b6cc6fa0084d0f096
-=======
->>>>>>> 43bd9a51d38b129b9d17be0b6cc6fa0084d0f096 
-
-
-<body class="">
-				<header class="">
-					<h1>Manipulating CSS Class Properties Using JavaScript</h1>
-				</header>
-				
-				<h2 class="">Examples:</h2>
-					<p class="">Every element of this web page can be manipulated using JavaScript.  Try to find and click on every element within the body of this page to completely change it.</p>
-					<button onclick="changeClass()" class="">BUTTON</button>
-				<div class="">This is a div.</div>
-				<canvas class="" style="border:1px solid #000000"></canvas>
-		</body>*/
 
 function changeClass() {
 	if (classCount == 4) {
@@ -403,7 +349,6 @@ function changeClass() {
 	//document.write(classCount);
 }
 
-//growBox('transition1', '700px', '350px', '#ffcc00', 'rotate(180deg)')
 function growBox(id, width, height, color, transform) {
 	var box1 = document.getElementById(id);
 	
@@ -481,18 +426,74 @@ function addDiv() {
 	var div = document.createElement("div");
 	var text = document.createTextNode("THIS IS A DIV ELEMENT");
 	div.appendChild(text);
-	div.style.color = "blue";
-	div.style.width = "500px";
-	div.style.height = "500px"
+	//div.style.color = "blue";
+	//div.style.width = "500px";
+	//div.style.height = "500px"
+	div.id = "div1";
+	div.className = "blueDiv";
+	div.addEventListener("click", rotateDiv1);
+	div.addEventListener("mouseout", stopBoarder);
+	div.addEventListener("mouseover", startBoarder);
 	document.getElementById('container').appendChild(div);
+}
+
+function addDiv2() {
+	var div = document.createElement("div");
+	var text = document.createTextNode("DIV2 Click Me!");
+	div.appendChild(text);
+	div.id = "div2";
+	div.addEventListener("click", colorDate);
+	document.getElementById('div1').appendChild(div);
 }
 
 function addImage() {
 	var image = document.createElement("img");
-	image.src = "/Media/mindBlown.PNG";
-	//image.src = "/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/mindBlown.png";
-	image.align = "middle";
+	var image2 = document.createElement("img");
+	//image.src = "/Media/mindBlown.PNG";
+	//image.src = "/Media/smiley.PNG";
+	image.src = "/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/mindBlown.png";
+	image2.src = "/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/smiley.png";
+	image2.id = "smiley";
+	image.id = "mindBlown";
+	image.className = "mindBlown";
+	image2.className = "smiley";
 	document.getElementById('container').appendChild(image);
+	document.getElementById('container').appendChild(image2);
 	showWarning();
+}
+
+function colorDate() {
+	var div2 = document.getElementById('div2');
+	var text = document.createTextNode("Color Transition Complete");
+	div2.innerHTML = "Today's Date is: " + Date();
+	div2.style.background = 'orange';
+	div2.appendChild(text);
+}
+
+function rotateDiv1() {
+	var div1 = document.getElementById('div1');
+	
+	if (aniCount ==3) {
+		aniCount = 1;
+	}
+	
+	if (aniCount == 1) {
+	div1.style.transform = 'rotateY(360deg)';
+	}
+	else {
+	div1.style.transform = '';
+	}
+	
+	aniCount++;
+}
+
+function startBoarder() {
+	var div1 = document.getElementById('div1');
+	div1.className = "aniDiv1";
+}
+
+function stopBoarder() {
+	var div1 = document.getElementById('div1');
+	div1.className = "blueDiv";
 }
 

@@ -191,9 +191,58 @@ input[type="text"]:hover {
     transition: width 3s, height 3s, background-color 3s, transform 3s;
 }
 
+.blueDiv {
+	border-width: 10px;
+	border-style: solid;
+	border-top-color: black;
+	border-bottom-color: black;
+	border-right-color: black;
+	border-left-color: black;
+	background-color: blue;
+	margin: none;
+	width: 500px;
+	height: 500px;
+	display: block;
+	-webkit-transition: -webkit-transform 3s;
+    transition: transform 3s;
+}
+
+.aniDiv1 {
+	border-width: 10px;
+	border-style: solid;
+	border-top-color: #00ff00;
+	border-bottom-color: #00ff00;
+	border-right-color: #ffff00;
+	border-left-color: #ffff00;
+	background-color: blue;
+	margin: none;
+	width: 500px;
+	height: 500px;
+	display: block;
+	-webkit-transition: -webkit-transform 3s;
+    transition: transform 3s;
+	-webkit-animation-name: aniDiv1;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name: aniDiv1;
+	animation-duration: .5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes aniDiv1 {
+    from {border-top-color:#00ff00;
+	border-bottom-color: #00ff00;
+	border-right-color: #ffff00;
+	border-left-color: #ffff00;}
+	to {border-top-color: #ffff00;
+	border-bottom-color: #ffff00;
+	border-right-color: #00ff00;
+	border-left-color: #00ff00;}
+}
+
 .div2 {
 	border: 1px black solid;
-	background-color: green;
+	background-color: red;
 	left: -325px;
 	top: 0px;
 	margin: none;
@@ -205,7 +254,7 @@ input[type="text"]:hover {
 
 .div3 {
 	border: 1px black solid;
-	background-color: green;
+	background-color: red;
 	left: -325px;
 	top: 0px;
 	margin: none;
@@ -214,13 +263,15 @@ input[type="text"]:hover {
 	display: block;
 	position: relative;
 	-webkit-animation-name: aniDiv2;
-	-webkit-animation-duration: 10s;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
 	animation-name: aniDiv2;
-	animation-duration: 10s;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
 }
 
 @keyframes aniDiv2 {
-    0%   {background-color: green; left:-325px; top:0px;}
+    0%   {background-color: red; left:-325px; top:0px;}
     25%  {background-color:purple; left:325px; top:0px;}
     50%  {background-color:blue; left:325px; top:300px;}
     75%  {background-color:Yellow; left:-325px; top:300px;}
@@ -234,3 +285,13 @@ input[type="text"]:hover {
 	height: auto;
 }
 
+#div2 {
+	border: 1px black solid;
+	background-color: #00ffcc;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	display: block;
+	-webkit-transition: background-color 2s;
+    transition: background-color 2s;
+}
