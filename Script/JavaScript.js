@@ -501,8 +501,8 @@ function setEventListeners() {
 	var button3 = document.getElementById('button3');
 	var button4 = document.getElementById('button4');
 	var img = document.getElementById('monaLisa');
-	//canvas.addEventListener("mouseover", draw1);
-	//canvas.addEventListener("mouseout", draw2);
+	canvas.addEventListener("mouseover", draw1);
+	canvas.addEventListener("mouseout", draw2);
 	img.addEventListener("click", picture);
 	button1.addEventListener("click", draw3);
 	button2.addEventListener("click", draw4);
