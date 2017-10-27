@@ -417,18 +417,15 @@ function addHeading() {
 function addNote() {
 	var note = document.createElement("p");
 	//note.id = "note";
-	var text = document.createTextNode("Below you will have the will experience several different JavaScript Events like onload, onTouch, etc.");
+	var text = document.createTextNode("Below you will experience several different JavaScript Events like onload, onTouch, etc.");
 	note.appendChild(text);
 	document.getElementById('container').appendChild(note);
 }
 
 function addDiv() {
 	var div = document.createElement("div");
-	var text = document.createTextNode("THIS IS A DIV ELEMENT");
+	var text = document.createTextNode("THIS IS A DIV ELEMENT.  CLICK ME!");
 	div.appendChild(text);
-	//div.style.color = "blue";
-	//div.style.width = "500px";
-	//div.style.height = "500px"
 	div.id = "div1";
 	div.className = "blueDiv";
 	div.addEventListener("click", rotateDiv1);
@@ -446,7 +443,7 @@ function addDiv2() {
 	document.getElementById('div1').appendChild(div);
 }
 
-function addImage() {
+/* function addImage() {
 	var image = document.createElement("img");
 	var image2 = document.createElement("img");
 	image.src = "/Media/mindBlown.PNG";
@@ -460,7 +457,7 @@ function addImage() {
 	document.getElementById('container').appendChild(image);
 	document.getElementById('container').appendChild(image2);
 	showWarning();
-}
+} */
 
 function colorDate() {
 	var div2 = document.getElementById('div2');
@@ -497,3 +494,76 @@ function stopBoarder() {
 	div1.className = "blueDiv";
 }
 
+function setEventListeners() {
+	var canvas = document.getElementById('canvas');
+	var button1 = document.getElementById('button1');
+	var button2 = document.getElementById('button2');
+	var button3 = document.getElementById('button3');
+	var button4 = document.getElementById('button4');
+	var img = document.getElementById('monaLisa');
+	//canvas.addEventListener("mouseover", draw1);
+	//canvas.addEventListener("mouseout", draw2);
+	img.addEventListener("click", picture);
+	button1.addEventListener("click", draw3);
+	button2.addEventListener("click", draw4);
+}
+
+function draw1() {
+	var canvas = document.getElementById('canvas');
+	var draw = canvas.getContext("2d");
+	draw.fillStyle = "blue";
+	draw.fillRect(0,0,650,300);
+}
+
+function draw2() {
+	var canvas = document.getElementById('canvas');
+	var draw = canvas.getContext("2d");
+	draw.fillStyle = "white";
+	draw.fillRect(0,0,650,300);
+}
+
+function draw3() {
+	var canvas = document.getElementById('canvas');
+	var draw = canvas.getContext("2d");
+	draw.font = "20px Arial";
+	draw.strokeText("MONA LISA",90,30);
+}
+
+function draw4() {
+	var canvas = document.getElementById('canvas');
+	var draw = canvas.getContext("2d");
+	draw.moveTo(130,100);
+	draw.lineTo(115,110);
+	draw.moveTo(145,100);
+	draw.lineTo(160,110);
+	draw.moveTo(130,130);
+	draw.lineTo(140,150);
+	draw.moveTo(132,130);
+	draw.lineTo(140,150);
+	draw.moveTo(134,130);
+	draw.lineTo(140,150);
+	draw.moveTo(136,130);
+	draw.lineTo(140,150);
+	draw.moveTo(138,130);
+	draw.lineTo(140,150);
+	draw.moveTo(140,130);
+	draw.lineTo(140,150);
+	draw.moveTo(142,130);
+	draw.lineTo(140,150);
+	draw.moveTo(144,130);
+	draw.lineTo(140,150);
+	draw.moveTo(146,130);
+	draw.lineTo(140,150);
+	draw.moveTo(148,130);
+	draw.lineTo(140,150);
+	draw.moveTo(150,130);
+	draw.lineTo(140,150);
+	draw.stroke();
+}
+
+function picture() {
+	var canvas = document.getElementById('canvas');
+	var draw = canvas.getContext("2d");
+	var img = document.getElementById('monaLisa');
+	draw.drawImage(img, -50, -30);
+}

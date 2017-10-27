@@ -29,7 +29,7 @@
 			</script> -->
 		</head>
 		
-		<body>
+		<body onload="setEventListeners()">
 			<div class="wrapper"></div>
 				<header>
 					<h1>HTML5 Tags - Video, Audio, and Canvas</h1>
@@ -39,8 +39,14 @@
 						<header><h2>Video</h2><header/>
 							<article>
 								<p></p>
-								<button onclick=""></button>
-								<div></div>
+								<div>
+									<video width="500" controls preload="metadata" poster="/Media/smiley.PNG">
+<!-- 									<video width="500" controls preload="metadata" poster="/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/mindBlown.png">
+ --><!-- 										<source src="/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/sub9video.mp4" type="video/mp4">
+ -->										<source src="/Media/sub9video.mp4" type="video/mp4">
+										<p>Your browser does not support HTML5 video.</p>
+									</video>
+								</div>
 							</article>
 					</section>
 					
@@ -48,8 +54,15 @@
 						<header><h2>Audio</h2><header/>
 							<article>
 								<p></p>
-								<button onclick=""></button>
-								<div></div>
+								<div>
+									<audio controls preload="none">
+										<!-- <source src="/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/blueBlackBug.mp3">
+										<source src="/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/blueBlackBug.ogg"> -->
+										<source src="/Media/blueBlackBug.mp3">
+										<source src="/Media/blueBlackBug.ogg">
+										<p>Your browser does not support HTML5 audio.</p>
+									</audio>
+								</div>
 							</article>
 					</section>
 					
@@ -57,8 +70,22 @@
 						<header><h2>Canvas</h2><header/>
 							<article>
 								<p></p>
-								<button onclick=""></button>
-								<div></div>
+								<div class="container">
+									<canvas id="canvas"></canvas>
+									<br/>
+									<figure>
+<!-- 										<img id="monaLisa" src="/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Media/monaLisa.png"></img>
+ -->										<img id="monaLisa" src="/Media/monaLisa.png"></img>
+										<br />
+										<figcaption>Click this image to paint it in the canvas!</figcaption>
+									</figure>
+									<br/>
+									<button class="button" id="button1">Add Title</button>
+									<button class="button" id="button2">Vandalize</button>
+									<br/>
+									<br/>
+									
+								</div>
 							</article>
 					</section>
 		</body>

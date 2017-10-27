@@ -122,6 +122,28 @@ input[type="text"]:hover {
 	border: 1px solid #999999;
 }
 
+canvas {
+	border: 5px solid black;
+	width: 650px;
+	height: 300px;
+	display: block;
+	position: relative;
+	margin: 20px;
+}
+
+.button {
+	float: left;
+	border: 1px solid black;
+	width: 25%;
+	display: block;
+	margin-left: 17%;
+}
+
+#monaLisa {
+	margin: auto;
+	display: block;
+}
+
 /*
 <body class="">
 				<header class="">
