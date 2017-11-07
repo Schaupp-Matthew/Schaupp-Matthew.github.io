@@ -20,7 +20,6 @@ article {
 p {
 	margin: auto;
 	text-align: center;
-	background-color: white;
 	width: 80%;
 }
 
@@ -372,4 +371,11 @@ canvas {
 	transition-duration: 5s;
 	transition-timing-function: ease-in;
 	transition-delay: .5s;
+}
+
+.paragraph1 {
+	margin: auto;
+	text-align: center;
+	width: 80%;
+	padding: 10%;
 }
