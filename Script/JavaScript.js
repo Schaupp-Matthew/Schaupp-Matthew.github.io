@@ -441,6 +441,7 @@ function addDiv2() {
 	div.id = "div2";
 	div.addEventListener("click", colorDate);
 	document.getElementById('div1').appendChild(div);
+	showWarning();
 }
 
 /* function addImage() {
