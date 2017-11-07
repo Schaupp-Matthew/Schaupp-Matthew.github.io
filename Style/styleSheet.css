@@ -200,6 +200,7 @@ canvas {
 	width: 700px;
 	height: 350px;
 	cursor: wait;
+	position: relative;
 }
 
 .div1 {
@@ -316,4 +317,59 @@ canvas {
 	display: block;
 	-webkit-transition: background-color 2s;
     transition: background-color 2s;
+}
+
+.example {
+	width: 25%;
+	height: 25%;
+	border-color: black;
+	border-width: 3px;
+	border-radius: 10%;
+	background-color: orange;
+	color: blue;
+	font-size: 1em;
+	font-weight: none;
+	text-align: justify-center;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 38%;
+	left: 38%;
+	-webkit-transition-property: width, height, border-color, border-width, border-radius, background-color, color, font-size, font-weight, top, left;
+	-webkit-transition-duration: 5s;
+	-webkit-transition-timing-function: ease-in;
+	-webkit-transition-delay: .5s;
+	transition-property: width, height, border-color, border-width, border-radius, background-color, color, font-size, font-weight, top, left;
+	transition-duration: 5s;
+	transition-timing-function: ease-in;
+	transition-delay: .5s;
+	
+}
+
+.transitionExample {
+	width: 80%;
+	height: 80%;
+	border-color: blue;
+	border-width: 10px;
+	border-radius: 50%;
+	background-color: purple;
+	color: orange;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: justify-center;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	-webkit-transition-property: width, height, border-color, border-width, border-radius, background-color, color, font-size, font-weight, top, left;
+	-webkit-transition-duration: 5s;
+	-webkit-transition-timing-function: ease-in;
+	-webkit-transition-delay: .5s;
+	transition-property: width, height, border-color, border-width, border-radius, background-color, color, font-size, font-weight, top, left;
+	transition-duration: 5s;
+	transition-timing-function: ease-in;
+	transition-delay: .5s;
 }

@@ -567,3 +567,15 @@ function picture() {
 	var img = document.getElementById('monaLisa');
 	draw.drawImage(img, -50, -30);
 }
+
+function transitionOne() {
+	var div = document.getElementById('transition');
+	var currentClass = div.className;
+	
+	if (currentClass == "example") {
+		div.className = "transitionExample";
+	}
+	else {
+		div.className = "example";
+	}
+}
