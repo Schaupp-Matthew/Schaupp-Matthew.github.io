@@ -121,6 +121,11 @@ input[type="text"]:hover {
 	border: 1px solid #999999;
 }
 
+.inputBlock {
+	display: block;
+	margin: auto;
+}
+
 canvas {
 	border: 5px solid black;
 	width: 650px;

@@ -580,3 +580,31 @@ function transitionOne() {
 		div.className = "example";
 	}
 }
+
+function transform() {
+	var div = document.getElementById('transform');
+	var scaleX = document.getElementById('scaleX').value;
+	var skewY = document.getElementById('skewY').value;
+	var skewX = document.getElementById('skewX').value;
+	var scaleY = document.getElementById('scaleY').value;
+	var translateX = document.getElementById('translateX').value;
+	var translateY = document.getElementById('translateY').value;
+	
+	div.style.transform = "matrix(" + scaleX + ", " + skewY + ", " + skewX + ", " + scaleY + ", " + translateX + ", " + translateY + ")";
+}
+
+/* function transform() {
+	var scaleX = document.getElementById('scaleX').value;
+	var skewY = document.getElementById('skewY').value;
+	var skewX = document.getElementById('skewX').value;
+	var scaleY = document.getElementById('scaleY').value;
+	var translateX = document.getElementById('translateX').value;
+	var translateY = document.getElementById('translateY').value;
+	
+	var transform = "div#transform {" +
+					"-webkit-transform: matrix(" + scaleX + ", " + skewY + ", " + skewX + ", " + scaleY + ", " + translateX + ", " + translateY + ") " +
+					"transform: matrix(" + scaleX + ", " + skewY + ", " + skewX + ", " + scaleY + ", " + translateX + ", " + translateY + ")" +
+					"}";
+	
+	document.getElementById('style').innerHTML = transform;
+} */

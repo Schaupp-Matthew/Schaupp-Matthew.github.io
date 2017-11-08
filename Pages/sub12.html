@@ -27,6 +27,10 @@
 			<script language="javascript" type="text/javascript" src="/Users/Matthew/Desktop/CIT 261/gitHub_repo/Schaupp-Matthew.github.io/Script/JavaScript.js">
 				
 			</script> -->
+			
+			<style id="style">
+			
+			</style>
 		</head>
 		
 		<body>
@@ -39,11 +43,26 @@
 				<section>
 						<header><h2>Transforms</h2><header/>
 							<article>
-								<p></p>
-								<button onclick=""></button>
-								<div class="invisible">
-									<div></div>
+								<p>Enter integer bellow to see how you can transform an element using the CSS matrix() method!</p><br/>
+								<button onclick="transform()">Transform</button>
+								<br/>
+								<br/>
+								Scale X (Between 0 and 6): 		<input type="text" value="0" class="inputBlock" id="scaleX"></input><br/>
+								Skew Y (Between +/- 0 and 1):   		<input type="text" value="0" class="inputBlock" id="skewY"></input><br/>
+								Skew X (Between +/- 0 and 1):   		<input type="text" value="0" class="inputBlock" id="skewX"></input><br/>
+								Scale Y (Between 0 and 6):  		<input type="text" value="0" class="inputBlock" id="scaleY"></input><br/>
+								Translate X (Between +/- 0 and 300):	<input type="text" value="0" class="inputBlock" id="translateX"></input><br/>
+								Translate Y (Between +/- 0 and 300):	<input type="text" value="0" class="inputBlock" id="translateY"></input><br/>
+								
+								<br/>
+								<br/>
+								<br/>
+								<div width="100%" height="100%">
+									<div class="div1" id="transform"></div>
 								</div>
+								<br/>
+								<br/>
 							</article>
-					</section>
+				</section>
+		</body>
 	</html>
