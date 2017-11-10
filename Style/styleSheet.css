@@ -9,12 +9,12 @@ body {
 section {
 	background-color: #b7c8d9;
 	margin: auto;
-	width: 80%;
+	width: 100%;
 }
 
 article {
 	margin: auto;
-	width: 80%;
+	width: 100%;
 }
 
 p {
@@ -34,11 +34,11 @@ nav {
 	width: 80%;
 }
 
-div {
+/* div {
 	background-color: #b7c8d9;
 	margin: auto;
 	width: 80%;
-}
+} */
 
 header {
 	text-align: center;
@@ -383,4 +383,58 @@ canvas {
 	text-align: center;
 	width: 80%;
 	padding: 10%;
+}
+
+#mario {
+	left: 0px;
+	top: 100px;
+	margin: none;
+	width: 100px;
+	height: 100px;
+	display: block;
+	position: relative;
+	-webkit-animation-name: mario;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name: mario;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes mario {
+    0%		{left:0px; top:100px;}
+	10%	 	{left:225px; top:100px;}
+	40%		{left:450px; top:0px;}
+	75%		{left:675px; top:100px;}
+    100%	{left:900px; top:100px;}
+}
+/* 75%		{left:675px; top:50px;}
+25%	 	{left:225px; top:50px;} */
+#marioBullet {
+	left: 820px;
+	top: 0px;
+	margin: none;
+	width: 180px;
+	height: 100px;
+	display: block;
+	position: relative;
+	-webkit-animation-name: marioBullet;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name: marioBullet;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes marioBullet {
+    0%   {left:820px; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+.marioDiv {
+	border: 5px black solid;
+	width: 1000px;
+	height: 300px;
+	position: relative;
+	background-color: white;
 }
