@@ -210,7 +210,7 @@ canvas {
 .div1 {
 	border: 1px black solid;
 	background-color: blue;
-	margin: none;
+	margin: auto;
 	width: 50px;
 	height: 50px;
 	display: block;
@@ -226,7 +226,8 @@ canvas {
 	border-right-color: black;
 	border-left-color: black;
 	background-color: blue;
-	margin: none;
+	position: relative;
+	margin: auto;
 	width: 500px;
 	height: 500px;
 	display: block;
@@ -242,7 +243,8 @@ canvas {
 	border-right-color: #ffff00;
 	border-left-color: #ffff00;
 	background-color: blue;
-	margin: none;
+	margin: auto;
+	position: relative;
 	width: 500px;
 	height: 500px;
 	display: block;
@@ -272,7 +274,7 @@ canvas {
 	background-color: red;
 	left: -325px;
 	top: 0px;
-	margin: none;
+	margin: auto;
 	width: 50px;
 	height: 50px;
 	display: block;
@@ -284,7 +286,7 @@ canvas {
 	background-color: red;
 	left: -325px;
 	top: 0px;
-	margin: none;
+	margin: auto;
 	width: 50px;
 	height: 50px;
 	display: block;
@@ -319,6 +321,8 @@ canvas {
 	width: 300px;
 	height: 300px;
 	display: block;
+	position: relative;
+	margin: auto;
 	-webkit-transition: background-color 2s;
     transition: background-color 2s;
 }
