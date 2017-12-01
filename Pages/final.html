@@ -1,30 +1,208 @@
 <!DOCTYPE html>
 	<html lang="en">	
 		<head>
+			<title>Countdown</title>
 			<meta charset="utf-8">
 			<meta name="description" content="CIT 261 Sandbox">
 			<meta name="Matt" content="CIT 261">
-			<title>CIT 261 Sandbox Pages</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
 			
 			<style>
+				* {
+					box-sizing:  border-box;}
+				
+				body {
+					margin: 0;}
+					
 				body.day {
 					background-image:  url("../Media/day.png"), url("/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/day.png");
 					background-color: #cccccc;
 					background-repeat:  no-repeat;
 					background-position:  center;
-					background-attachment:  fixed;}
+					background-attachment:  fixed;
+					-webkit-background-size: cover;
+					-moz-background-size: cover;
+					-o-background-size: cover;
+					background-size: cover;}
+					
 				body.night {
 					background-image:  url("../Media/night.png"), url("/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/night.png");
 					background-color: #cccccc;
 					background-repeat:  no-repeat;
 					background-position:  center;
-					background-attachment:  fixed;}
+					background-attachment:  fixed;
+					-webkit-background-size: cover;
+					-moz-background-size: cover;
+					-o-background-size: cover;
+					background-size: cover;}
+					
+				.header {
+					background-color:  #f1f1f1;
+					padding: 20px;
+					text-align:  center;}
+					
+				.topnav {
+					overflow:  hidden;
+					background-color:  #333;
+					opacity: 0.75;}
+					
+				.topnav div {
+					float:  left;
+					display:  block;
+					color:  #f2f2f2;
+					text-align:  center;
+					padding: 14px 16px;
+					text-decoration:  none;}
+					
+				.topnav div:hover {
+					background-color: #ddd;
+					color: black;}
+					
+				.cloud {
+					max-width: 175px;
+					visibility: hidden;
+					position: fixed;;}
+					
+				.star {
+					max-width: 175px;
+					visibility: none;
+					position: fixed;
+					right: 10px;}
+					
+				.column {
+					float:  left;
+					padding: 20px;}
+					
+				.column.side {
+					width: 25%;
+					border: 5px solid yellow;
+					color: #000000;}
+					
+				.column.middle {
+					width: 50%;
+					border: 5px solid yellow;
+					border-radius: 10%;
+					color: #000000;
+					background-color: #f1f1f1;
+					opacity: 0.75;
+					height: 900px;}
+					
+				.row:after {
+					content: "";
+					display: table;
+					clear:  both;}
+					
+				@media (max-width: 600px) {
+					.column.side, .column.middle {
+						width: 100%;}}
+						
+				.timer {
+					max-width: 50%;
+					border: 5px solid #000000;
+					color: #000000;
+					background-color: #60cd3d;
+					margin: auto;
+					height: 70%;}
+					
+				.buttons {
+					padding: 20px;
+					margin: auto;
+					text-align: justify;}
+					
+				.options {
+					border-radius: 75%;
+					height: 50px;
+					width: 75px;
+					background-color: #fff87d;}
+					
+				.largeImg {
+					width: 40%;
+					height: 20%;
+					border-radius: 100%;}
+					
+				.smallImg {
+					width: 20%;
+					height: 10%;
+					border-radius: 100%;}
+						
+				.footer {
+					background-color: #f1f1f1;
+					padding: 10px;
+					text-align: center;}
 			</style>
 			
 		</head>
 		
-		<body class="day">
+		<body class="night">
+		
+			<div class="header">
+				<header>Countdown</header>
+			</div>
 			
+			<div class="topnav">
+				<div>How to Use</div>
+				<div>Info</div>
+				<div>Version</div>
+			</div>
+			
+			<br/>
+			<br/>
+			
+			<img id="cloud" class="cloud" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/cloud.png"></img>
+						<!-- <img id="cloud" class="cloud" src="/Media/cloud.PNG"></img> -->
+						
+			<img id="star" class="star" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/star.png"></img>
+						<!-- <img id="star" class="star" src="/Media/star.PNG"></img> -->
+			
+			<div class="row">
+			
+				<div class="column side">
+					<h2>Left Side Content</h2>
+				</div>
+				
+				<div class="column middle">
+					<div class="timer">
+						
+					</div>
+				
+					<div class="buttons">
+						<select class="options">
+							<option value="">Minutes</option>
+							<option value="60">1 min</option>
+							<option value="120">2 mins</option>
+							<option value="180">3 mins</option>
+							<option value="240">4 mins</option>
+							<option value="300">5 mins</option>
+							<option value="360">6 mins</option>
+							<option value="420">7 mins</option>
+							<option value="480">8 mins</option>
+							<option value="540">9 mins</option>
+							<option value="600">10 mins</option>
+							<option value="660">11 mins</option>
+							<option value="720">12 mins</option>
+							<option value="780">13 mins</option>
+							<option value="840">14 mins</option>
+							<option value="900">15 mins</option>
+						</select>
+						
+						<img id="play" class="largeImg" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/play.png"></img>
+						<!-- <img id="play" class="largeImg" src="/Media/play.PNG"></img> -->
+						
+						<img id="stop" class="smallImg" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/stop.jpg"></img>
+						<!-- <img id="stop" class="smallImg" src="/Media/stop.jpg"></img> -->
+					</div>
+					
+				</div>
+				
+				<div class="column side">
+					<h2>Right Side Content</h2>
+				</div>
+				
+			</div>
+			
+			<div class="footer">
+				<footer><p>Footer</p></footer>
+			</div>
 			
 			<noscript>JavaScript is required for this site!  Please use a JavaScript enabled browser.  Thank you!</noscript>
 			<script language="javascript" type="text/javascript">
