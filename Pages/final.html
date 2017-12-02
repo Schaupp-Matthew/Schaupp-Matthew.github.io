@@ -48,7 +48,8 @@
 					
 				.topnav div {
 					float:  left;
-					display:  block;
+					display:  inline-block;
+					position: relative;
 					color:  #f2f2f2;
 					text-align:  center;
 					padding: 14px 16px;
@@ -58,16 +59,35 @@
 					background-color: #ddd;
 					color: black;}
 					
+				#dropDownContent1 {
+					max-width: 160px;
+					display: none;}
+					
+				#dropDownContent2 {
+					max-width: 160px;
+					display: none;}
+					
+				#dropDownContent3 {
+					max-width: 160px;
+					display: none;}
+					
+				#dropDownContent4 {
+					max-width: 160px;
+					display: none;}
+					
 				.cloud {
 					max-width: 175px;
 					visibility: hidden;
-					position: fixed;;}
+					position: fixed;
+					z-index: -1;}
 					
 				.star {
 					max-width: 175px;
 					visibility: none;
 					position: fixed;
-					right: 10px;}
+					right: 10px;
+					top: 0px;
+					z-index: -1;}
 					
 				.column {
 					float:  left;
@@ -75,7 +95,6 @@
 					
 				.column.side {
 					width: 25%;
-					border: 5px solid yellow;
 					color: #000000;}
 					
 				.column.middle {
@@ -85,7 +104,7 @@
 					color: #000000;
 					background-color: #f1f1f1;
 					opacity: 0.75;
-					height: 900px;}
+					height: 1000px;}
 					
 				.row:after {
 					content: "";
@@ -98,11 +117,20 @@
 						
 				.timer {
 					max-width: 50%;
+					height: 70%;
 					border: 5px solid #000000;
 					color: #000000;
 					background-color: #60cd3d;
 					margin: auto;
-					height: 70%;}
+					-webkit-animation:  none;
+					animation: none;
+					-webkit-animation-play-state: running;
+					animation-play-state: running;}
+					
+				@keyframes startTimer {
+					0% {height: 70%; background-color: #60cd3d;}
+					50% {height: 35%; background-color: yellow;}
+					100% {height: 0%; background-color: red;}}
 					
 				.buttons {
 					padding: 20px;
@@ -133,41 +161,56 @@
 			
 		</head>
 		
-		<body class="night">
+		<body class="day">
 		
 			<div class="header">
 				<header>Countdown</header>
 			</div>
 			
+			<!-- <img id="star" class="star" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/star.png"></img> -->
+						<img id="star" class="star" src="/Media/star.PNG"></img>
+			
 			<div class="topnav">
-				<div>How to Use</div>
-				<div>Info</div>
-				<div>Version</div>
+				<div id="content1" onmouseenter="dropDown(this.id)" onmouseleave="dropUp(this.id)">
+					<span>Description</span>
+						<p id="dropDownContent1">Is it a battle to get your child to do something quickly?  This visual
+						countdown App was designed for my 2-year-old son to help him get his
+						reward chart star for getting dressed quickly.  Getting him dressed used
+						to take forever with many stalling strategies being deployed.  Now he runs
+						upstairs asking for the "Countdown". (Childrens Countdown Timer, Fehners Software LLP)</p>
+				</div>
+				<div id="content2" onmouseenter="dropDown(this.id)" onmouseleave="dropUp(this.id)">
+					<span>How to Use</span>
+					<p id="dropDownContent2">In order to use this timer, simply select the desired amount of time, click
+					the big green start/play button, and the timer will start.  If you need to stop the timer for any reason,
+					simply push the stop button.</p>
+				</div>
+				<div id="content3" onmouseenter="dropDown(this.id)" onmouseleave="dropUp(this.id)">
+					<span>Info</span>
+					<p id="dropDownContent3">This App has been developed by MES Software LLP (fictitious company).</p>
+				</div>
+				<div id="content4" onmouseenter="dropDown(this.id)" onmouseleave="dropUp(this.id)">
+					<span>Version</span>
+					<p id="dropDownContent4">Version 1.0</p>
+				</div>
 			</div>
 			
 			<br/>
 			<br/>
 			
-			<img id="cloud" class="cloud" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/cloud.png"></img>
-						<!-- <img id="cloud" class="cloud" src="/Media/cloud.PNG"></img> -->
-						
-			<img id="star" class="star" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/star.png"></img>
-						<!-- <img id="star" class="star" src="/Media/star.PNG"></img> -->
+			<!-- <img id="cloud" class="cloud" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/cloud.png"></img> -->
+						<img id="cloud" class="cloud" src="/Media/cloud.PNG"></img>
 			
 			<div class="row">
 			
 				<div class="column side">
-					<h2>Left Side Content</h2>
+					
 				</div>
 				
 				<div class="column middle">
-					<div class="timer">
-						
-					</div>
 				
 					<div class="buttons">
-						<select class="options">
-							<option value="">Minutes</option>
+						<select class="options" id="options">
 							<option value="60">1 min</option>
 							<option value="120">2 mins</option>
 							<option value="180">3 mins</option>
@@ -185,20 +228,30 @@
 							<option value="900">15 mins</option>
 						</select>
 						
-						<img id="play" class="largeImg" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/play.png"></img>
-						<!-- <img id="play" class="largeImg" src="/Media/play.PNG"></img> -->
+						<!-- <img id="play" class="largeImg" onclick="start('timer')" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/play.png"></img> -->
+						<img id="play" class="largeImg" src="/Media/play.PNG"></img>
 						
-						<img id="stop" class="smallImg" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/stop.jpg"></img>
-						<!-- <img id="stop" class="smallImg" src="/Media/stop.jpg"></img> -->
+						<!-- <img id="pause" class="smallImg" onclick="pause('timer')" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/pause.png"></img> -->
+						<img id="pause" class="smallImg" src="/Media/pause.png"></img>
+						
+						<!-- <img id="stop" class="smallImg" onclick="stop('timer')" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/stop.jpg"></img> -->
+						<img id="stop" class="smallImg" src="/Media/stop.jpg"></img>
+					</div>
+				
+					<div class="timer" id="timer">
+						
 					</div>
 					
 				</div>
 				
 				<div class="column side">
-					<h2>Right Side Content</h2>
+					
 				</div>
 				
 			</div>
+			
+			<br/>
+			<br/>
 			
 			<div class="footer">
 				<footer><p>Footer</p></footer>
@@ -207,8 +260,54 @@
 			<noscript>JavaScript is required for this site!  Please use a JavaScript enabled browser.  Thank you!</noscript>
 			<script language="javascript" type="text/javascript">
 			
-			
-			
+				<!-- Add Event Listeners Here: -->
+				window.addEventListener("load", function(event) {
+					console.log("All resources finished loading!");
+					});
+					
+				
+				<!--|||||||||||||||||||||||||||-->
+				
+				
+				function dropDown(id) {
+					if (id == "content1") {
+						document.getElementById("dropDownContent1").style.display = "block";}
+					else if (id == "content2") {
+						document.getElementById("dropDownContent2").style.display = "block";}
+					else if (id == "content3") {
+						document.getElementById("dropDownContent3").style.display = "block";}
+					else {
+						document.getElementById("dropDownContent4").style.display = "block";}}
+					
+				function dropUp(id) {
+					if (id == "content1") {
+						document.getElementById("dropDownContent1").style.display = "none";}
+					else if (id == "content2") {
+						document.getElementById("dropDownContent2").style.display = "none";}
+					else if (id == "content3") {
+						document.getElementById("dropDownContent3").style.display = "none";}
+					else {
+						document.getElementById("dropDownContent4").style.display = "none";}}
+						
+				function start(id) {
+					var timer = document.getElementById(id);
+					var secs = document.getElementById('options').value;
+					
+					timer.style.animation = "startTimer " + secs + "s " + "linear";}
+					
+				function stop(id) {
+					var timer = document.getElementById(id);
+					
+					timer.style.animation = "none";}
+					
+				function pause(id) {
+					var timer = document.getElementById(id);;
+					
+					if (timer.style.webkitAnimationPlayState === 'running') {
+						timer.style.webkitAnimationPlayState = 'paused';}
+					else {
+						timer.style.webkitAnimationPlayState = "running";}}
+					
 			</script>
 		</body>
 	</html>
