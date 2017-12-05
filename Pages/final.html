@@ -14,10 +14,8 @@
 				body {
 					margin: 0;}
 					
-			
-					
 				body.day {
-					background-image:  url("../Media/day.png"), url("/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/day.png");
+					background-image:  url("../Media/day.png");
 					background-color: #cccccc;
 					background-repeat:  no-repeat;
 					background-position:  center;
@@ -27,10 +25,8 @@
 					-o-background-size: cover;
 					background-size: cover;}
 					
-				
-					
 				body.night {
-					background-image:  url("../Media/night.png"), url("/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/night.png");
+					background-image:  url("../Media/night.png");
 					background-color: #cccccc;
 					background-repeat:  no-repeat;
 					background-position:  center;
@@ -145,17 +141,20 @@
 					border-radius: 75%;
 					height: 50px;
 					width: 75px;
-					background-color: #fff87d;}
+					background-color: #fff87d;
+					box-shadow: 0px 0px 5px 2px;}
 					
 				.largeImg {
 					width: 40%;
 					height: 20%;
-					border-radius: 100%;}
+					border-radius: 100%;
+					box-shadow: 0px 0px 5px 2px;}
 					
 				.smallImg {
 					width: 20%;
 					height: 10%;
-					border-radius: 100%;}
+					border-radius: 100%;
+					box-shadow: 0px 0px 5px 2px;}
 						
 				.footer {
 					background-color: #f1f1f1;
@@ -169,11 +168,12 @@
 		
 			<div class="header">
 				<header>Countdown</header>
+				<div id="clock"></div>
 			</div>
 			
 			<!-- <img id="star" class="star" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/star.png"></img> -->
 			
-			<img id="star" class="star" src="/Media/star.PNG"></img>
+			<img id="star" class="star" src="../Media/star.PNG"></img>
 			
 			<div class="topnav">
 				<div id="content1" onmouseenter="dropDown(this.id)" onmouseleave="dropUp(this.id)">
@@ -205,7 +205,7 @@
 			
 			<!-- <img id="cloud" class="cloud" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/cloud.png"></img> -->
 						
-			<img id="cloud" class="cloud" src="/Media/cloud.PNG"></img>
+			<img id="cloud" class="cloud" src="../Media/cloud.PNG"></img>
 			
 			<div class="row">
 			
@@ -236,15 +236,15 @@
 						
 						<!-- <img id="play" class="largeImg" onclick="start('timer')" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/play.png"></img> -->
 						
-						<img id="play" class="largeImg" src="../Media/play.png"></img>
+						<img id="play" class="largeImg" onclick="start('timer')" src="../Media/play.png"></img>
 						
 						<!-- <img id="pause" class="smallImg" onclick="pause('timer')" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/pause.png"></img> -->
 						
-						<img id="pause" class="smallImg" src="/Media/pause.PNG"></img>
+						<img id="pause" class="smallImg" onclick="pause('timer')" src="../Media/pause.PNG"></img>
 						
 						<!-- <img id="stop" class="smallImg" onclick="stop('timer')" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/stop.jpg"></img> -->
 						
-						<img id="stop" class="smallImg" src="../Media/stop.jpg"></img>
+						<img id="stop" class="smallImg" onclick="stop('timer')" src="../Media/stop.jpg"></img>
 					</div>
 				
 					<div class="timer" id="timer">
@@ -274,9 +274,34 @@
 					console.log("All resources finished loading!");
 					});
 					
+				window.addEventListener("load", clock());
+					
 				
 				<!--|||||||||||||||||||||||||||-->
 				
+				
+				function clock() {
+					var time = new Date();
+					var hour = time.getHours();
+					var mins = time.getMinutes();
+					var amPM = "am";
+					mins = zeros(mins);
+					
+					if (hour > 12) {
+						amPM = "pm";}
+					
+					if (hour > 12) {
+						hour = hour - 12;}
+					else if (hour == 0) {
+						hour = hour + 12}
+					
+					document.getElementById('clock').innerHTML = hour + ":" + mins + amPM;
+					setInterval(clock, 10000);}
+					
+				function zeros(z) {
+					if (z < 10) {
+						z = "0" + z}
+						return z;}
 				
 				function dropDown(id) {
 					if (id == "content1") {
@@ -312,7 +337,7 @@
 				function pause(id) {
 					var timer = document.getElementById(id);;
 					
-					if (timer.style.webkitAnimationPlayState === 'running') {
+					if (timer.style.webkitAnimationPlayState == 'running') {
 						timer.style.webkitAnimationPlayState = 'paused';}
 					else {
 						timer.style.webkitAnimationPlayState = "running";}}
