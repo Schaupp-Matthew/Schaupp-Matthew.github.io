@@ -312,7 +312,7 @@
 							<option value="WI">Wisconsin</option>
 							<option value="WY">Wyoming</option>
 						</select>
-						<button onclick="weather()">Submit</button>
+						<button onclick="getWeather()">Submit</button>
 					<div id="status" class="weather"></div>
 					<div id="weather" class="weather"></div>
 					<a href="https://www.yahoo.com/?ilc=401" target="_blank"> <img src="https://poweredby.yahoo.com/purple.png" width="134" height="29"/> </a>
@@ -338,6 +338,8 @@
 					
 				window.addEventListener("load", clock());
 				
+				window.addEventListener("load", weatherDefault());
+				
 				<!-- window.addEventListener("load", weather()); -->
 				
 				<!--|||||||||||||||||||||||||||-->
@@ -350,7 +352,7 @@
 					var amPM = "am";
 					mins = zeros(mins);
 					
-					if (hour > 12) {
+					if (hour >= 12) {
 						amPM = "pm";}
 					
 					if (hour > 12) {
@@ -405,10 +407,23 @@
 					else {
 						timer.style.webkitAnimationPlayState = "running";}}
 						
-				function weather() {
-					var weather = new XMLHttpRequest();
+				function weatherDefault() {
+					var history = localStorage.getItem("historyObject");
+					var city = history.city;
+					var state = history.state;
+					
+					weather(city, state);}
+					
+				function getWeather() {
 					var city = document.getElementById('city').value;
 					var state = document.getElementById('state').value;
+					
+					weather(city, state);}
+						
+				function weather(c, s) {
+					var weather = new XMLHttpRequest();
+					var city = c;
+					var state = s;
 					var endpoint = "https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + ", " + state + "')&format=json";
 					
 					weather.onreadystatechange = function() {
@@ -422,7 +437,14 @@
 					weather.open("GET", endpoint, true);
 					<!-- weather.setRequestHeader("Accept", "application/json"); -->
 					weather.send();
-					}
+					
+					var history = new Object();
+						history.city = city;
+						history.state = state;
+						
+					var historyJSON = JSON.stringify(history);
+					
+					localStorage.setItem("historyObject", historyJSON);}
 					
 				
 					
