@@ -101,7 +101,7 @@
 					border-radius: 10%;
 					color: #000000;
 					background-color: #f1f1f1;
-					opacity: 0.75;
+					opacity: 0.80;
 					text-align: center;}
 					
 				.column.middle {
@@ -124,8 +124,10 @@
 						
 				.timer {
 					max-width: 50%;
-					height: 70%;
+					height: 60%;
+					max-height: 60%;
 					border: 5px solid #000000;
+					border-radius: 10%;
 					color: #000000;
 					background-color: #60cd3d;
 					margin: auto;
@@ -135,8 +137,8 @@
 					animation-play-state: running;}
 					
 				@keyframes startTimer {
-					0% {height: 70%; background-color: #60cd3d;}
-					50% {height: 35%; background-color: yellow;}
+					0% {height: 60%; background-color: #60cd3d;}
+					50% {height: 30%; background-color: yellow;}
 					100% {height: 0%; background-color: red;}}
 					
 				.buttons {
@@ -171,7 +173,7 @@
 			
 		</head>
 		
-		<body class="day">
+		<body class="day" id="body">
 		
 			<div class="header">
 				<header>Countdown</header>
@@ -216,8 +218,18 @@
 			
 			<div class="row">
 			
-				<div class="column side">
-					
+				<div class="column side" id="left">
+					<div class="weather">
+						<header>Favorite Kid Videos</header>
+						<p>Instructions:  In this section, you get to add as many of your favorite kid videos from Youtube as
+						you like.  Just navigate to your video on <a href="https://www.youtube.com/results?search_query=kids+songs">YouTube.com</a>, 
+						click on share at the bottom of the video, click on embed, copy the src= section, paste it into the "URL/Website" here, click submit, and 
+						your video will be added below!</p>
+						<input type="text" placeholder="URL/Website" id="URL"></input>
+						<button onclick="addFrame()">Submit</button>
+						<br/><br/>
+					</div>
+					<br/>
 				</div>
 				
 				<div class="column middle">
@@ -260,10 +272,11 @@
 					
 				</div>
 				
-				<div class="column side">
-					<header>Weather:</header>
-					<input type="text" placeholder="City" id="city"></input>
-					<select id="state">
+				<div class="column side" id="right">
+					<div class="weather">
+						<header>Weather:</header>
+						<input type="text" placeholder="City" id="city"></input>
+						<select id="state">
 							<option value="AL">Alabama</option>
 							<option value="AK">Alaska</option>
 							<option value="AZ">Arizona</option>
@@ -313,6 +326,9 @@
 							<option value="WY">Wyoming</option>
 						</select>
 						<button onclick="getWeather()">Submit</button>
+						<br/><br/>
+					</div>
+					<br/>
 					<div id="status" class="weather"></div>
 					<div id="weather" class="weather"></div>
 					<a href="https://www.yahoo.com/?ilc=401" target="_blank"> <img src="https://poweredby.yahoo.com/purple.png" width="134" height="29"/> </a>
@@ -331,6 +347,11 @@
 			<noscript>JavaScript is required for this site!  Please use a JavaScript enabled browser.  Thank you!</noscript>
 			<script language="javascript" type="text/javascript">
 			
+				<!-- Global Variables: -->
+				var count = 1;
+				
+				<!--|||||||||||||||||||||||||||-->
+				
 				<!-- Add Event Listeners Here: -->
 				window.addEventListener("load", function(event) {
 					console.log("All resources finished loading!");
@@ -340,7 +361,7 @@
 				
 				window.addEventListener("load", weatherDefault());
 				
-				<!-- window.addEventListener("load", weather()); -->
+				window.addEventListener("load", background());
 				
 				<!--|||||||||||||||||||||||||||-->
 				
@@ -367,6 +388,22 @@
 					if (z < 10) {
 						z = "0" + z}
 						return z;}
+						
+				function background() {
+					var time = new Date();
+					var hour = time.getHours();
+					var body = document.getElementById('body');
+					var star = document.getElementById('star');
+					var cloud = document.getElementById('cloud');
+					
+					if (hour >= 7 && hour <=19) {
+						body.className = "day";
+						star.style.visibility = "hidden";
+						cloud.style.visibility = "none";}
+					else {
+						body.className = "night";
+						cloud.style.visibility = "hidden";
+						star.style.visibility = "none";}}
 				
 				function dropDown(id) {
 					if (id == "content1") {
@@ -408,9 +445,14 @@
 						timer.style.webkitAnimationPlayState = "running";}}
 						
 				function weatherDefault() {
-					var history = localStorage.getItem("historyObject");
-					var city = history.city;
-					var state = history.state;
+					var city = localStorage.getItem("city");
+					var state = localStorage.getItem("state");
+					
+					if (city == null || state == null) {
+						localStorage.setItem("city", "Waxhaw");
+						localStorage.setItem("state", "NC");
+						city = "Waxhaw";
+						state = "NC";}
 					
 					weather(city, state);}
 					
@@ -429,22 +471,40 @@
 					weather.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
 						var weatherJSON = JSON.parse(this.responseText);
-						document.getElementById('weather').innerHTML = weatherJSON.query.results.channel.item.description;}
+						document.getElementById('weather').innerHTML = city + ", " + state + weatherJSON.query.results.channel.item.description;}
 					else {
 						var status = this.statusText;
 						document.getElementById('status').innerHTML = status;}};
 						
 					weather.open("GET", endpoint, true);
-					<!-- weather.setRequestHeader("Accept", "application/json"); -->
 					weather.send();
 					
-					var history = new Object();
-						history.city = city;
-						history.state = state;
-						
-					var historyJSON = JSON.stringify(history);
+					localStorage.setItem("city", city);
+					localStorage.setItem("state", state);}
 					
-					localStorage.setItem("historyObject", historyJSON);}
+				function addFrame() {
+					var url = document.getElementById('URL').value;
+					var video = document.createElement("iframe");
+					video.src = url;
+					video.id = count;
+					video.width = "100%";
+					video.height = "150";
+					video.frameborder = "0";
+					video.gesture = "media";
+					video.allow = "encrypted-media";
+					video.setAttribute('allowFullScreen', '');
+					var br = document.createElement("br");
+					var button = document.createElement("button");
+					button.innerHTML = "Remove";
+					button.id = count;
+					button.onclick = "removeFrame()";
+					
+					document.getElementById('left').appendChild(video);
+					document.getElementById('left').appendChild(button);
+					document.getElementById('left').appendChild(br);
+					document.getElementById('left').appendChild(br);
+					
+					count++;}
 					
 				
 					
