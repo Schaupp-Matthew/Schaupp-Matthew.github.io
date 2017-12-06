@@ -226,7 +226,7 @@
 						click on share at the bottom of the video, click on embed, copy the src= section, paste it into the "URL/Website" here, click submit, and 
 						your video will be added below!</p>
 						<input type="text" placeholder="URL/Website" id="URL"></input>
-						<button onclick="addFrame()">Submit</button>
+						<button onclick="addFrame()">Add Video</button>
 						<br/><br/>
 					</div>
 					<br/>
@@ -347,8 +347,10 @@
 			<noscript>JavaScript is required for this site!  Please use a JavaScript enabled browser.  Thank you!</noscript>
 			<script language="javascript" type="text/javascript">
 			
-				<!-- Global Variables: -->
+				<!-- Global Variables/Objects: -->
 				var count = 1;
+				var videos = [];
+				window.alert(videos.length);
 				
 				<!--|||||||||||||||||||||||||||-->
 				
@@ -357,11 +359,13 @@
 					console.log("All resources finished loading!");
 					});
 					
-				window.addEventListener("load", clock());
+				window.addEventListener("load", clock);
 				
-				window.addEventListener("load", weatherDefault());
+				window.addEventListener("load", weatherDefault);
 				
-				window.addEventListener("load", background());
+				window.addEventListener("load", background);
+				
+				window.addEventListener("load", addFramesDefault);
 				
 				<!--|||||||||||||||||||||||||||-->
 				
@@ -482,11 +486,25 @@
 					localStorage.setItem("city", city);
 					localStorage.setItem("state", state);}
 					
-				function addFrame() {
-					var url = document.getElementById('URL').value;
+				function addFramesDefault() {
+					var getVideos = localStorage.getItem("videos");
+					
+					if (getVideos == null) {
+						return;}
+					else {
+						var videos = JSON.parse(getVideos);
+						videos.forEach(frameDefault);}}
+						
+				function frameDefault(url) {
+					var storageCount = localStorage.getItem("count");
+					if (storageCount == null) {
+						localStorage.setItem("count", count);}
+					else {
+						count = localStorage.getItem("count");}
+						
 					var video = document.createElement("iframe");
 					video.src = url;
-					video.id = count;
+					video.id = "frame" + count;
 					video.width = "100%";
 					video.height = "150";
 					video.frameborder = "0";
@@ -497,21 +515,77 @@
 					var button = document.createElement("button");
 					button.innerHTML = "Remove";
 					button.id = count;
-					button.onclick = "removeFrame()";
+					button.setAttribute("onclick", "removeFrame(this.id)");
 					
 					document.getElementById('left').appendChild(video);
 					document.getElementById('left').appendChild(button);
 					document.getElementById('left').appendChild(br);
 					document.getElementById('left').appendChild(br);
 					
-					count++;}
+					count++;
+					localStorage.setItem("count", count);}
 					
+				function addFrame() {
+					var storageCount = localStorage.getItem("count");
+					if (storageCount == null) {
+						localStorage.setItem("count", count);}
+					else {
+						count = localStorage.getItem("count");}
+						
+					var url = document.getElementById('URL').value;
+					var video = document.createElement("iframe");
+					video.src = url;
+					video.id = "frame" + count;
+					video.width = "100%";
+					video.height = "150";
+					video.frameborder = "0";
+					video.gesture = "media";
+					video.allow = "encrypted-media";
+					video.setAttribute('allowFullScreen', '');
+					var br = document.createElement("br");
+					var button = document.createElement("button");
+					button.innerHTML = "Remove";
+					button.id = count;
+					button.setAttribute("onclick", "removeFrame(this.id)");
+					
+					document.getElementById('left').appendChild(video);
+					document.getElementById('left').appendChild(button);
+					
+					count++;
+					localStorage.setItem("count", count);
+					videos.splice(0, 0, url);
+					saveFrames();}
+					
+				function removeFrame(id) {
+					var frameID = "frame" + id;
+					var frame = document.getElementById(frameID);
+					var button = document.getElementById(id);
+					
+					var url = document.getElementById(frameID).src;
+					window.alert(url);
+					
+					var index = videos.indexOf(url);
+					videos.splice(index, 1);
+					
+					document.getElementById('left').removeChild(frame);
+					document.getElementById('left').removeChild(button);
+					saveFrames();}
 				
+				function saveFrames() {
+					var videosJSON = JSON.stringify(videos);
+					
+					localStorage.setItem("videos", videosJSON);}
 					
 			</script>
 			
 		</body>
-		<!-- , url("/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/day.png") 
-		"https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22" + city + "%2C%20" + state + "%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"-->
-		<!-- , url("/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/night.png") -->
+		
+		<!-- To Do:
+		--animation for cloud
+		--animation for star
+		--footer
+		--video tutorial for video section
+		--more transitions 
+		--more transforms -->
+		
 	</html>
