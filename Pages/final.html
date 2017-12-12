@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html lang="en">	
 		<head>
-			<title>Countdown</title>
+			<title>Kid Countdown Timer</title>
 			<meta charset="utf-8">
 			<meta name="description" content="CIT 261 Sandbox">
 			<meta name="Matt" content="CIT 261">
@@ -37,9 +37,14 @@
 					background-size: cover;}
 					
 				.header {
-					background-color:  #f1f1f1;
-					padding: 20px;
-					text-align:  center;}
+					display:  inline-block;
+					position: relative;
+					float: right;
+					background-color:  #333;
+					opacity: 0.75;
+					color:  #f2f2f2;
+					text-align:  center;
+					padding: 5px 16px;}
 					
 				.topnav {
 					overflow:  hidden;
@@ -79,15 +84,52 @@
 					max-width: 175px;
 					visibility: none;
 					position: fixed;
-					z-index: -1;}
+					left: 0%;
+					z-index: -1;
+					-webkit-animation-name: cloudy;
+					-webkit-animation-iteration-count: infinite;
+					-webkit-animation-duration: 40s;
+					-webkit-animation-timing-function: linear;
+					animation-name: cloudy;
+					animation-iteration-count: infinite;
+					animation-duration: 40s;
+					animation-timing-function: linear;}
+					
+				@-webkit-keyframes cloudy{
+					0%{left: 0%}
+					50%{left: 100%}
+					100%{left: 0%}}
+					
+				keyframes cloudy{
+					0%{left: 0%}
+					50%{left: 100%}
+					100%{left: 0%}}
 					
 				.star {
 					max-width: 175px;
 					visibility: none;
 					position: fixed;
-					right: 10px;
-					top: 0px;
-					z-index: -1;}
+					right: 0%;
+					top: 0%;
+					z-index: -1;
+					-webkit-animation-name: fallingStar;
+					-webkit-animation-iteration-count: infinite;
+					-webkit-animation-duration: 5s;
+					-webkit-animation-timing-function: linear;
+					-webkit-animation-delay: 2s;
+					animation-name: fallingStar;
+					animation-iteration-count: infinite;
+					animation-duration: 5s;
+					animation-timing-function: linear;
+					animation-delay: 2s;}
+					
+				@-webkit-keyframes fallingStar{
+					0%{right: 0%; top: 0%;}
+					100%{right: 100%; top: 100%;}}
+					
+				keyframes fallingStar{
+					0%{right: 0%; top: 0%;}
+					100%{right: 100%; top: 100%;}}
 					
 				.column {
 					float:  left;
@@ -111,7 +153,8 @@
 					color: #000000;
 					background-color: #f1f1f1;
 					opacity: 0.75;
-					height: 1000px;}
+					height: 700px;
+					max-height: 700px;}
 					
 				.row:after {
 					content: "";
@@ -124,8 +167,8 @@
 						
 				.timer {
 					max-width: 50%;
-					height: 60%;
-					max-height: 60%;
+					height: 65%;
+					max-height: 65%;
 					border: 10px dashed yellow;
 					border-radius: 10%;
 					color: #000000;
@@ -137,8 +180,13 @@
 					animation-play-state: running;}
 					
 				@keyframes startTimer {
-					0% {height: 60%; background-color: #60cd3d; border-radius: 10%; border: 10px dashed yellow;}
-					50% {height: 30%; background-color: yellow; border-radius: 100%; border: 20px dashed red;}
+					0% {height: 65%; background-color: #60cd3d; border-radius: 10%; border: 10px dashed yellow;}
+					50% {height: 32.5%; background-color: yellow; border-radius: 100%; border: 20px dashed red;}
+					100% {height: 0%; background-color: red; border-radius: 10%; border: 10px dashed yellow;}}
+					
+				@-webkit-keyframes startTimer {
+					0% {height: 65%; background-color: #60cd3d; border-radius: 10%; border: 10px dashed yellow;}
+					50% {height: 32.5%; background-color: yellow; border-radius: 100%; border: 20px dashed red;}
 					100% {height: 0%; background-color: red; border-radius: 10%; border: 10px dashed yellow;}}
 					
 				.buttons {
@@ -182,11 +230,25 @@
 					border: inset;
 					box-shadow: 0 5px #666;
 					transform: translateY(4px);}
-						
-				.footer {
-					background-color: #f1f1f1;
-					padding: 10px;
-					text-align: center;}
+					
+				#horse {
+					visibility: visible;
+					position: fixed;
+					right: 5%;
+					bottom: 0%;
+					z-index: -1;
+					-webkit-transition: right 2s linear, -webkit-transform 2.5s;
+					transition: right 2s linear, transform 2.5s;}
+					
+				#rocket {
+					visibility: hidden;
+					position: fixed;
+					right: 5%;
+					bottom: 0%;
+					z-index: -1;
+					-webkit-transition: right 2s linear, -webkit-transform 2.5s;
+					transition: right 2s linear, transform 2.5s;}
+					
 			</style>
 			
 		</head>
@@ -194,11 +256,9 @@
 		<body class="day" id="body">
 		
 			<div class="header">
-				<header>Countdown</header>
+				<header>Kid Countdown Timer</header>
 				<div id="clock"></div>
 			</div>
-			
-			<!-- <img id="star" class="star" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/star.png"></img> -->
 			
 			<img id="star" class="star" src="../Media/star.PNG"></img>
 			
@@ -228,9 +288,6 @@
 			</div>
 			
 			<br/>
-			<br/>
-			
-			<!-- <img id="cloud" class="cloud" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/cloud.png"></img> -->
 						
 			<img id="cloud" class="cloud" src="../Media/cloud.PNG"></img>
 			
@@ -238,13 +295,14 @@
 			
 				<div class="column side" id="left">
 					<div class="weather">
-						<header>Favorite Kid Videos</header>
-						<p>Instructions:  In this section, you get to add as many of your favorite kid videos from Youtube as
+						<header>Favorite Kid Videos/Websites</header>
+						<p>Instructions:  In this section, you get to add as many of your favorite kid videos from Youtube or web pages as
 						you like.  Just navigate to your video on <a href="https://www.youtube.com/results?search_query=kids+songs">YouTube.com</a>, 
-						click on share at the bottom of the video, click on embed, copy the src= section, paste it into the "URL/Website" here, click submit, and 
-						your video will be added below!</p>
+						click on share at the bottom of the video, click on embed, copy the src="the stuff between the quotes" section (leave the quotes out), paste it into the "URL/Website" here, click submit, and 
+						your video will be added below!  If you want to add a website just copy the entire URL and paste it here and click Add to add it below!  Now 
+						everytime you visit this application your videos or websites will automatically be loaded as well!</p>
 						<input type="text" placeholder="URL/Website" id="URL"></input>
-						<button onclick="addFrame()">Add Video</button>
+						<button onclick="addFrame()">Add</button>
 						<br/><br/>
 					</div>
 					<br/>
@@ -271,15 +329,9 @@
 							<option value="900">15 mins</option>
 						</select>
 						
-						<!-- <img id="play" class="largeImg" onclick="start('timer')" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/play.png"></img> -->
-						
 						<img id="play" class="largeImg" onclick="start('timer')" src="../Media/play.png"></img>
 						
-						<!-- <img id="pause" class="smallImg" onclick="pause('timer')" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/pause.png"></img> -->
-						
 						<img id="pause" class="smallImg" onclick="pause('timer')" src="../Media/pause.PNG"></img>
-						
-						<!-- <img id="stop" class="smallImg" onclick="stop('timer')" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Media/stop.jpg"></img> -->
 						
 						<img id="stop" class="smallImg" onclick="stop('timer')" src="../Media/stop.jpg"></img>
 					</div>
@@ -355,18 +407,22 @@
 				
 			</div>
 			
-			<br/>
+			<img id="horse" src="../Media/horse.PNG" onmouseover="horseRocket(this.id)"></img>
+			<img id="rocket" src="../Media/rocket.PNG" onmouseover="horseRocket(this.id)"></img>
+			
 			<br/>
 			
-			<div class="footer">
-				<footer><p>Footer</p></footer>
-			</div>
+			<audio id="horseAudio" src="../Media/horse.wav" ></audio>
+			<audio id="rocketAudio" src="../Media/rocket.wav" ></audio>
+			<audio id="elephantAudio" src="../Media/elephant.wav" ></audio>
+			<audio id="timerAudio" src="../Media/clock.wav" loop></audio>
 			
 			<noscript>JavaScript is required for this site!  Please use a JavaScript enabled browser.  Thank you!</noscript>
 			<script language="javascript" type="text/javascript">
 			
 				<!-- Global Variables/Objects: -->
 				var count = 1;
+				var transitionCount = 1;
 				var videos = [];
 				window.alert(videos.length);
 				
@@ -384,6 +440,10 @@
 				window.addEventListener("load", background);
 				
 				window.addEventListener("load", addFramesDefault);
+				
+				document.getElementById('timer').addEventListener("animationend", stopTimer);
+				document.getElementById('timer').addEventListener("webkitAnimationEnd", stopTimer);
+				
 				
 				<!--|||||||||||||||||||||||||||-->
 				
@@ -417,15 +477,21 @@
 					var body = document.getElementById('body');
 					var star = document.getElementById('star');
 					var cloud = document.getElementById('cloud');
+					var horse = document.getElementById('horse');
+					var rocket = document.getElementById('rocket');
 					
 					if (hour >= 7 && hour <=19) {
 						body.className = "day";
 						star.style.visibility = "hidden";
-						cloud.style.visibility = "none";}
+						cloud.style.visibility = "visible";
+						horse.style.visibility = "visible";
+						rocket.style.visibility = "hidden";}
 					else {
 						body.className = "night";
 						cloud.style.visibility = "hidden";
-						star.style.visibility = "none";}}
+						star.style.visibility = "visible";
+						horse.style.visibility = "hidden";
+						rocket.style.visibility = "visible";}}
 				
 				function dropDown(id) {
 					if (id == "content1") {
@@ -450,21 +516,36 @@
 				function start(id) {
 					var timer = document.getElementById(id);
 					var secs = document.getElementById('options').value;
+					var audio = document.getElementById('timerAudio');
 					
-					timer.style.animation = "startTimer " + secs + "s " + "linear";}
+					timer.style.animation = "startTimer " + secs + "s " + "linear";
+					audio.play();}
 					
 				function stop(id) {
 					var timer = document.getElementById(id);
+					var audio = document.getElementById('timerAudio');
 					
-					timer.style.animation = "none";}
+					timer.style.animation = "none";
+					
+					audio.pause();
+					audio.currentTime = 0;}
+					
+				function stopTimer() {
+					var audio = document.getElementById('timerAudio');
+					audio.pause();
+					audio.currentTime = 0;
+					alarm();}
 					
 				function pause(id) {
-					var timer = document.getElementById(id);;
+					var timer = document.getElementById(id);
+					var audio = document.getElementById('timerAudio');
 					
 					if (timer.style.webkitAnimationPlayState == 'running') {
 						timer.style.webkitAnimationPlayState = 'paused';}
 					else {
-						timer.style.webkitAnimationPlayState = "running";}}
+						timer.style.webkitAnimationPlayState = "running";}
+					
+					audio.pause();}
 						
 				function weatherDefault() {
 					var city = localStorage.getItem("city");
@@ -518,13 +599,13 @@
 					if (storageCount == null) {
 						localStorage.setItem("count", count);}
 					else {
-						count = localStorage.getItem("count");}
+						count = storageCount;}
 						
 					var video = document.createElement("iframe");
 					video.src = url;
 					video.id = "frame" + count;
 					video.width = "100%";
-					video.height = "150";
+					video.height = "250";
 					video.frameborder = "0";
 					video.gesture = "media";
 					video.allow = "encrypted-media";
@@ -537,7 +618,6 @@
 					
 					document.getElementById('left').appendChild(video);
 					document.getElementById('left').appendChild(button);
-					document.getElementById('left').appendChild(br);
 					document.getElementById('left').appendChild(br);
 					
 					count++;
@@ -594,16 +674,42 @@
 					
 					localStorage.setItem("videos", videosJSON);}
 					
+				function horseRocket(id) {
+					var element = document.getElementById(id);
+					
+					if (transitionCount == 3) {
+						transitionCount = 1;}
+					
+					if ((id == "horse" || id == "rocket") && transitionCount == 1) {
+						element.style.right = "70%";
+						element.style.transform = "scaleX(-1)";
+						if (id == "horse") {
+							playHorse();}
+						else {
+							playRocket();}}
+					else {
+						element.style.right = "5%";
+						element.style.transform = "scaleX(1)";
+						if (id == "horse") {
+							playHorse();}
+						else {
+							playRocket();}}
+						
+					transitionCount++;}
+					
+					function playRocket() {
+						var audio = document.getElementById('rocketAudio');
+						audio.play();}
+						
+					function playHorse() {
+						var audio = document.getElementById('horseAudio');
+						audio.play();}
+						
+					function alarm() {
+						var audio = document.getElementById('elephantAudio');
+						audio.play();}
+					
 			</script>
-			
 		</body>
-		
-		<!-- To Do:
-		--animation for cloud
-		--animation for star
-		--footer
-		--sound effects
-		--more transitions 
-		--more transforms -->
 		
 	</html>
