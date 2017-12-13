@@ -116,12 +116,12 @@
 					-webkit-animation-iteration-count: infinite;
 					-webkit-animation-duration: 5s;
 					-webkit-animation-timing-function: linear;
-					-webkit-animation-delay: 2s;
+					-webkit-animation-delay: 10s;
 					animation-name: fallingStar;
 					animation-iteration-count: infinite;
 					animation-duration: 5s;
 					animation-timing-function: linear;
-					animation-delay: 2s;}
+					animation-delay: 10s;}
 					
 				@-webkit-keyframes fallingStar{
 					0%{right: 0%; top: 0%;}
@@ -160,10 +160,6 @@
 					content: "";
 					display: table;
 					clear:  both;}
-					
-				@media (max-width: 600px) {
-					.column.side, .column.middle {
-						width: 100%;}}
 						
 				.timer {
 					max-width: 50%;
@@ -250,6 +246,10 @@
 					z-index: -1;
 					-webkit-transition: right 2s linear, -webkit-transform 2.5s;
 					transition: right 2s linear, transform 2.5s;}
+					
+				@media (max-width: 600px) {
+					.column.side, .column.middle {
+						width: 100%;}}
 					
 			</style>
 			
