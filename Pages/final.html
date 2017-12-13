@@ -5,7 +5,7 @@
 			<meta charset="utf-8">
 			<meta name="description" content="CIT 261 Sandbox">
 			<meta name="Matt" content="CIT 261">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			
 			<style>
 				* {
@@ -57,7 +57,7 @@
 					position: relative;
 					color:  #f2f2f2;
 					text-align:  center;
-					padding: 14px 16px;
+					padding: 14px 50px;
 					text-decoration:  none;}
 					
 				.topnav div:hover {
@@ -65,23 +65,23 @@
 					color: black;}
 					
 				#dropDownContent1 {
-					max-width: 320px;
+					max-width: 300px;
 					display: none;}
 					
 				#dropDownContent2 {
-					max-width: 320px;
+					max-width: 300px;
 					display: none;}
 					
 				#dropDownContent3 {
-					max-width: 320px;
+					max-width: 300px;
 					display: none;}
 					
 				#dropDownContent4 {
-					max-width: 320px;
+					max-width: 300px;
 					display: none;}
 					
 				.cloud {
-					max-width: 175px;
+					max-width: 10%;
 					visibility: none;
 					position: fixed;
 					left: 0%;
@@ -106,7 +106,7 @@
 					100%{left: 0%}}
 					
 				.star {
-					max-width: 175px;
+					max-width: 10%;
 					visibility: none;
 					position: fixed;
 					right: 0%;
@@ -114,14 +114,14 @@
 					z-index: -1;
 					-webkit-animation-name: fallingStar;
 					-webkit-animation-iteration-count: infinite;
-					-webkit-animation-duration: 5s;
+					-webkit-animation-duration: 4s;
 					-webkit-animation-timing-function: linear;
-					-webkit-animation-delay: 10s;
+					-webkit-animation-delay: 2s;
 					animation-name: fallingStar;
 					animation-iteration-count: infinite;
-					animation-duration: 5s;
+					animation-duration: 4s;
 					animation-timing-function: linear;
-					animation-delay: 10s;}
+					animation-delay: 2s;}
 					
 				@-webkit-keyframes fallingStar{
 					0%{right: 0%; top: 0%;}
@@ -136,7 +136,7 @@
 					padding: 20px;}
 					
 				.column.side {
-					width: 25%;
+					max-width: 25%;
 					color: #000000;}
 					
 				.weather {
@@ -146,8 +146,21 @@
 					opacity: 0.80;
 					text-align: center;}
 					
+				.frame {
+					max-height: 100px;
+					overflow: hidden;
+					border-radius: 10%;
+					color: #000000;
+					background-color: #f1f1f1;
+					opacity: 0.80;
+					text-align: center;}
+					
+				.frame:hover {
+					max-height: 600px;
+					overflow: auto;}
+					
 				.column.middle {
-					width: 50%;
+					max-width: 50%;
 					border: 5px solid yellow;
 					border-radius: 10%;
 					color: #000000;
@@ -192,14 +205,12 @@
 					
 				.options {
 					border-radius: 75%;
-					height: 50px;
-					width: 75px;
+					max-width: 10%;
 					background-color: #fff87d;
 					box-shadow: 0px 0px 5px 2px;}
 					
 				.largeImg {
-					width: 30%;
-					height: 15%;
+					max-width: 30%;
 					border-radius: 100%;
 					border: outset;
 					box-shadow: 0 9px #999;
@@ -213,8 +224,7 @@
 					transform: translateY(4px);}
 					
 				.smallImg {
-					width: 10%;
-					height: 5%;
+					max-width: 10%;
 					border-radius: 100%;
 					border: outset;
 					box-shadow: 0 9px #999;
@@ -230,6 +240,7 @@
 				#horse {
 					visibility: visible;
 					position: fixed;
+					max-width: 20%;
 					right: 5%;
 					bottom: 0%;
 					z-index: -1;
@@ -239,8 +250,7 @@
 				#rocket {
 					visibility: hidden;
 					position: fixed;
-					width: 250px;
-					height: 250px;
+					max-width: 20%;
 					right: 5%;
 					bottom: 0%;
 					z-index: -1;
@@ -249,7 +259,10 @@
 					
 				@media (max-width: 600px) {
 					.column.side, .column.middle {
-						width: 100%;}}
+						max-width: 100%;}
+					
+					.topnav {
+						overflow: auto;}}
 					
 			</style>
 			
@@ -296,13 +309,17 @@
 			<div class="row">
 			
 				<div class="column side" id="left">
-					<div class="weather">
+					<div class="frame">
 						<header>Favorite Kid Videos/Websites</header>
 						<p>Instructions:  In this section, you get to add as many of your favorite kid videos from Youtube or web pages as
 						you like.  Just navigate to your video on <a href="https://www.youtube.com/results?search_query=kids+songs">YouTube.com</a>, 
 						click on share at the bottom of the video, click on embed, copy the src="the stuff between the quotes" section (leave the quotes out), paste it into the "URL/Website" here, click submit, and 
 						your video will be added below!  If you want to add a website just copy the entire URL and paste it here and click Add to add it below!  Now 
 						everytime you visit this application your videos or websites will automatically be loaded as well!</p>
+						<p>Here are a few sample URLs for you to practice with:</p>
+						<p>http://www.byui.edu/</p>
+						<p>https://www.youtube.com/embed/vp5rwesz8eU</p>
+						<p>(Copy and paste these below)</p>
 						<input type="text" placeholder="URL/Website" id="URL"></input>
 						<button onclick="addFrame()">Add</button>
 						<br/><br/>
@@ -653,7 +670,6 @@
 					var button = document.getElementById(id);
 					
 					var url = document.getElementById(frameID).src;
-					window.alert(url);
 					
 					var index = videos.indexOf(url);
 					videos.splice(index, 1);
