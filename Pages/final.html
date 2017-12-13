@@ -243,6 +243,8 @@
 				#rocket {
 					visibility: hidden;
 					position: fixed;
+					width: 250px;
+					height: 250px;
 					right: 5%;
 					bottom: 0%;
 					z-index: -1;
@@ -471,7 +473,7 @@
 					var horse = document.getElementById('horse');
 					var rocket = document.getElementById('rocket');
 					
-					if (hour >= 7 && hour <=19) {
+					if (hour >= 7 && hour <=18) {
 						body.className = "day";
 						star.style.visibility = "hidden";
 						cloud.style.visibility = "visible";
