@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html lang="en">	
 		<head>
-			<title>Kid Countdown Timer</title>
+			<title>Kids Countdown Timer</title>
 			<meta charset="utf-8">
 			<meta name="description" content="CIT 261 Sandbox">
 			<meta name="Matt" content="CIT 261">
@@ -88,11 +88,11 @@
 					z-index: -1;
 					-webkit-animation-name: cloudy;
 					-webkit-animation-iteration-count: infinite;
-					-webkit-animation-duration: 40s;
+					-webkit-animation-duration: 90s;
 					-webkit-animation-timing-function: linear;
 					animation-name: cloudy;
 					animation-iteration-count: infinite;
-					animation-duration: 40s;
+					animation-duration: 90s;
 					animation-timing-function: linear;}
 					
 				@-webkit-keyframes cloudy{
@@ -243,7 +243,6 @@
 					max-width: 20%;
 					right: 5%;
 					bottom: 0%;
-					z-index: -1;
 					-webkit-transition: right 2s linear, -webkit-transform 2.5s;
 					transition: right 2s linear, transform 2.5s;}
 					
@@ -253,7 +252,6 @@
 					max-width: 20%;
 					right: 5%;
 					bottom: 0%;
-					z-index: -1;
 					-webkit-transition: right 2s linear, -webkit-transform 2.5s;
 					transition: right 2s linear, transform 2.5s;}
 					
@@ -689,7 +687,7 @@
 						transitionCount = 1;}
 					
 					if ((id == "horse" || id == "rocket") && transitionCount == 1) {
-						element.style.right = "70%";
+						element.style.right = "75%";
 						element.style.transform = "scaleX(-1)";
 						if (id == "horse") {
 							playHorse();}
