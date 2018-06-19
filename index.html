@@ -1,142 +1,237 @@
 <!DOCTYPE html>
-	<html lang="en">
-	
-		
-		<head>
-			<meta charset="utf-8">
-			<meta name="description" content="CIT 261 Sandbox">
-			<meta name="Matt" content="CIT 261">
-			<title>CIT 261 Sandbox Pages</title>
-			
-			<!--For website:-->
-			<link href="Style/styleSheet.css" type="text/css" rel="stylesheet" />
-			
-			<script language="javascript" type="text/javascript" src="Script/JavaScript.js">
-				
-			</script>
-			
-			<!--For Development:-->
-			<!-- <link href="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Style/styleSheet.css" type="text/css" rel="stylesheet" />
-			
-			<script language="javascript" type="text/javascript" src="/Users/Mattn/Desktop/CIT 261/Schaupp-Matthew.github.io/Script/JavaScript.js">
-				
-			</script> -->
-			
-		</head>
-		
-		<body>
-			<div>
-				<header>
-					<h1>Newborn Tracker</h1>
-				</header>
-					
-					<section>
-						<article>
-							<p>The purpose of the web application is to provide a tracking tool that </br>
-							mothers can use to keep track of important factors such as feedings and times, bowel movements, and wet diapers.</br>
-							</br>
-							In order for this application to work properly, it will need access to your local storage </br>
-							in order to save all of the data you record within.  It is important to know that this data remains </br>
-							with you on your computer and is not used by or accessed by any other.  If you clear your local storage </br>
-							in your browser you will loose all of your data.  In addition, you should always use the same browser as </br>
-							you data will only be saved in the browser you are currently using.</br>
-							</br>
-							I hope this web application proves useful and congratulations on your new addition!</br>
-							
-							Below you will find an example of what your saved data will look like:</p>
-						<article>
-						
-						<table>
-							<caption>Example</caption>
-							<tbody>
-								<tr>
-									<th>Time-Date</th>
-									<th>Feeding</th>
-									<th>Amount (oz)</th>
-									<th>Bowel Movement</th>
-									<th>Wet Diaper</th>
-								</tr>
-									<td>7am-9/15</td>
-									<td>Yes</td>
-									<td>2oz</td>
-									<td>Yes</td>
-									<td>Yes</td>
-								<tr>
-									<td>10am-9/5</td>
-									<td>Yes</td>
-									<td>2oz</td>
-									<td>Yes</td>
-									<td>Yes</td>
-								</tr>
-							</tbody>
-						</table>
-					</section>
-			</div>
-			
-			<div>
-				<section>
-					<p>Please use the input fields below to add data to your table:</p>
-					
-					<fieldset>
-						<!-- <label>Time-Date</label>
-							<input type="text" name="Time-Date" id="timeDate"></input> -->
-						<label>Feeding</label>
-							<select id="feeding">
-								<option value="Yes">Yes</option>
-								<option value="No">No</option>
-							</select>
-						<label>Amount (oz)</label>
-							<input type="text" name="Amount (oz)" id="amount"></input>
-						<label>Bowel Movement</label>
-							<select id="bm">
-								<option value="Yes">Yes</option>
-								<option value="No">No</option>
-							</select>
-						<label>Wet Diaper</label>
-							<select id="wetDiaper">
-								<option value="Yes">Yes</option>
-								<option value="No">No</option>
-							</select>
-						<button type="button" onclick="addRow()">Submit</button>	
-					</fieldset>
-					
-				</section>
-			</div>
-			
-			<div id="tableOutput"></div>
-			
-			<div class="nav">
-				<!--<header>-->
-					<h3>Extra Examples</h3>
-				<!--</header>-->
-				
-					<section>
-						
-						<p>Below you will find extra examples of each technology used in this web application.</br>
-						   These examples are on an as needed basis only.
-						</p>
-						
-					</section>
-					
-					<nav>
-						<ol>
-							<li><a href="/Pages/sub1" class="">Loops, Conditional Statements, Functions, Variables, Parameter, Arrays, Associative Arrays</a></li>
-							<li><a href="/Pages/sub2" class="">Object Creation Functions, Inheritance, Properties, Methods, Instantiation</a></li>
-							<li><a href="/Pages/sub3" class="">JSON Parse, Stringify</a></li>
-							<li><a href="/Pages/sub4" class="">Using XMLHTTPRequest to Consume a JSON Web Service</a></li>
-							<li><a href="/Pages/sub5" class="">Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</a></li>
-							<li><a href="/Pages/sub6" class="">DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</a></li>
-							<li><a href="/Pages/sub7" class="">Manipulating CSS Class Properties Using JavaScript</a></li>
-							<li><a href="/Pages/sub8" class="">Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</a></li>
-							<li><a href="/Pages/sub9" class="">Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events</a></li>
-							<li><a href="/Pages/sub10" class="">HTML5 Tags - Video, Audio, and Canvas</a></li>
-							<li><a href="/Pages/sub11" class="">Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library)</a></li>
-							<li><a href="/Pages/sub12" class="">Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries (Thought Library)</a></li>
-							<li><a href="/Pages/sub13" class="">Designing, Defining, and Triggering CSS3 Animations without Custom Libraries (Thought Library)</a></li>
-							<li><a href="/Pages/final" class="">Final Project</a></li>
-						</ol>
-					</nav>
-			</div>
-			</br>
-		</body>
-	</html>
+<html>
+<title>Resume: Matthew Schaupp</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="/Media/Pathway.jpg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2>Matthew Schaupp</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Waxhaw, NC</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ccbsamatt@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>8038049767</p>
+          <hr>
+		  
+		  <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>OBJECTIVE:</b></p>
+		  <p>I am seeking a career where I can use my experience and skills in a positive manner to meet work related goals.</p> 
+		  <br>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>SUMMARY OF QUALIFICATIONS:</b></p>
+          <ul>
+			<li>Excellent collaborative, team worker</li>
+			<li>Deep understanding of leading technologies</li>
+			<li>Self-starter and goal oriented</li>
+			<li>Life-long learner:  Always willing and excited to learn new concepts, technologies, and methods</li>
+		  </ul>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>EXPERIENCE:</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>System Administrator:</b></h5>
+          <ul>
+			<li>Linux and Windows operating systems configuration and optimization</li>
+			<li>Workstation and server administration</li>
+			<li>Fedora and Ubuntu Server deployment and administration</li>
+			<li>Windows workstations, Windows Server 2012 R2, and Windows Server 2016 deployment and administration</li>
+			<li>Shell scripting</li>
+			<li>Able to use command prompt and GUI</li>
+			<li>Firewall administration</li>
+			<li>File shares</li>
+			<li>DNS administration</li>
+			<li>DHCP administration</li>
+			<li>Active Directory administration</li>
+			<li>IIS</li>
+			<li>File systems administration</li>
+			<li>Installation, configuration, and upgrading</li>
+			<li>Systems security</li>
+			<li>Remote Desktop</li>
+		  </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Network Administrator:</b></h5>
+          <ul>
+			<li>Router and switch configuration</li>
+			<li>Understanding of the OSI model</li>
+			<li>Troubleshooting network problems</li>
+			<li>IP configuration with subnetting, VLSM, etc.</li>
+			<li>PPPoE configuration</li>
+			<li>IPv4 addressing</li>
+			<li>IPv6 addressing</li>
+			<li>Cisco devices</li>
+			<li>LAN switching</li>
+			<li>Binary math</li>
+			<li>VLAN and InterVLAN routing</li>
+			<li>DHCP configuration</li>
+			<li>ACL configuration</li>
+			<li>NAT configuration</li>
+			<li>NTP configuration</li>
+			<li>VLAN Trunking Protocol (VTP) configuration</li>
+			<li>Spanning Tree Protocol (STP) configuration</li>
+			<li>Leased Lines WAN Links</li>
+			<li>VPN configuration</li>
+			<li>OSPF configuration</li>
+			<li>IPv4 and IPv6 EIGRP configuration</li>
+			<li>eBGP</li>
+			<li>SNMP</li>
+			<li>QoS monitoring and management</li>
+			<li>AAA network security</li>
+		  </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Database Administrator:</b></h5>
+          <ul>
+			<li>Oracle and MySQL database administration</li>
+			<li>SQL</li>
+			<li>PL/SQL</li>
+			<li>All phases of database development and administration: Analysis, design, development, deployment, and maintenance</li>
+			<li>DDL, DML, DCL, and TCL</li>
+			<li>UML for database design</li>
+			<li>RDBMS concepts and applications</li>
+		  </ul>
+          <hr>
+        </div>
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>Web Developer:</b></h5>
+          <ul>
+			<li>HTML, CSS, JavaScript, and PHP</li>
+			<li>Static and dynamic site development</li>
+			<li>Frontend and backend development</li>
+			<li>MVC architecture</li>
+			<li>All basic programming concepts</li>
+			<li>JSON</li>
+			<li>XMLHTTPRequest</li>
+			<li>Local Storage, Session, and Cookies</li>
+			<li>DOM manipulation</li>
+			<li>CSS transitions, transforms, and animations</li>
+			<li>JavaScript events</li>
+			<li>HTML video, audio, and canvas</li>
+			<li>Client and server side validation</li>
+			<li>The Software Development Life Cycle (SDLC)</li>
+			<li>Waterfall and Agile methodologies</li>
+			<li>GIT/GitHub repositories</li>
+			<li>Netbeans and Eclipse IDEs</li>
+		  </ul>
+          <hr>
+        </div>
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>Computer Software Developer:</b></h5>
+          <ul>
+			<li>Object Oriented Programming: Java</li>
+			<li>J2EE</li>
+			<li>Java collections</li>
+			<li>Hibernate</li>
+			<li>Servlets using Tomcat</li>
+			<li>JSON</li>
+			<li>HTTPURLConnection</li>
+			<li>JUnit testing</li>
+			<li>Java concurrency: Threads, Runnables, and Executors</li>
+			<li>MVC architecture</li>
+			<li>Application Controller Pattern (APC)</li>
+			<li>UML: Use Case, State, and Sequence diagrams</li>
+			<li>Use case documents</li>
+			<li>System level testing concepts</li>
+			<li>The Software Development Life Cycle (SDLC)</li>
+			<li>Waterfall and Agile methodologies</li>
+			<li>GIT/GitHub repositories</li>
+			<li>Netbeans and Eclipse IDEs</li>
+			<li>Andriod Studio</li>
+		  </ul>
+          <hr>
+        </div>
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>Project Manager:</b></h5>
+          <ul>
+			<li>Microsoft Project 2013</li>
+			<li>Deep understanding of the Triple Constraints: Scope, Time, Cost</li>
+			<li>Waterfall and Agile methodologies</li>
+			<li>Documentation and reporting</li>
+			<li>Work breakdown structures</li>
+			<li>Project Lifecycle: Initiation, planning, executing, controlling, and closing</li>
+			<li>Project proposal, charter, and documentation</li>
+			<li>Risk management and mitigation</li>
+			<li>Critical path analysis</li>
+			<li>Gantt Charts</li>
+		  </ul>
+          <hr>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>EMPLOYMENT HISTORY</h2>
+        <div class="w3-container">
+          <ul>
+			<li>2015-2016  <b>Sanitation Equipment Operator</b>  The City of Charlotte</li>
+			<li>2013-2014  <b>Construction Worker II, Landscape Tech II, Wastewater Treatment Plant Operator</b>  The City of Gastonia</li>
+			<li>2010-2013  <b>District Executive</b>  The Boy Scouts of America</li>
+			<li>2009-2010  <b>Floor Technician</b>  The Medical University of South Carolina</li> 
+			<li>2007-2009  <b>Missionary</b>  The South Africa Durban Mission</li>
+			<li>2002-2007  <b>Lifeguard</b>  Gregory Health and Wellness Center</li>
+		  </ul>
+        </div>
+      </div>
+	  
+	  <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>EDUCATION AND TRAINING</h2>
+        <div class="w3-container">
+          <ul>
+			<li><b>Brigham Young University Idaho:</b> B.S. Computer Information Technology (Senior online. 3.94 GPA)</li>
+			<li><b>Brigham Young University Idaho:</b> Computer Information Technology Certification</li>
+			<li><b>TestOut:</b> Routing and Switching Pro Certification</li>
+			<li><b>The University of North Carolina Charlotte:</b> Biology, Statistics... 4.0 GPA</li>
+			<li><b>The University of South Carolina:</b> Associates in Science (3.94 GPA)</li>
+			<li><b>York Technical College:</b> State approved Certified Nursing Assistant program (427938)</li>
+			<li><b>Class A CDL</b></li>
+			<li><b>The Boy Scouts of America:</b> Eagle Scout</li>
+		  </ul>
+        </div>
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Find me on LinkedIn</p>
+  <a href="www.linkedin.com/in/matthew-schaupp"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>
