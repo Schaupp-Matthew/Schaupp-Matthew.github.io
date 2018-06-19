@@ -47,7 +47,7 @@
 					padding: 5px 16px;}
 					
 				.topnav {
-					overflow:  hidden;
+					overflow:  auto;
 					background-color:  #333;
 					opacity: 0.75;}
 					
@@ -258,9 +258,14 @@
 				@media (max-width: 600px) {
 					.column.side, .column.middle {
 						max-width: 100%;}
-					
-					.topnav {
-						overflow: auto;}}
+						
+					.topnav div {
+						display: block;
+						}
+						
+					.header {
+						display: block;
+						float: none;}}
 					
 			</style>
 			
