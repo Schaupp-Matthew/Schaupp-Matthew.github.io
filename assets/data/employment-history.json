@@ -1,0 +1,60 @@
+{
+    "employmentHistory": [
+        {
+            "jobTitle": "Software Engineer III, Vice President",
+            "employer": "Bank of America",
+            "startDate": "2018",
+            "endDate": "Present",
+            "iconUrl": "assets/images/bofa-logo.PNG"
+        },
+        {
+            "jobTitle": "Application Developer V (Contractor)",
+            "employer": "Collabera, Inc.",
+            "startDate": "2017",
+            "endDate": "2018",
+            "iconUrl": "assets/images/collabera.PNG"
+        },
+        {
+            "jobTitle": "Equipment Operator",
+            "employer": "North Carolina Department of Transportation",
+            "startDate": "2016",
+            "endDate": "2017",
+            "iconUrl": "assets/images/ncdot.PNG"
+        },
+        {
+            "jobTitle": "Equipment Operator",
+            "employer": "The City of Charlotte",
+            "startDate": "2015",
+            "endDate": "2016",
+            "iconUrl": "assets/images/charlotte.PNG"
+        },
+        {
+            "jobTitle": "Construction Worker 2, Landscape Tech 2, Wastewater Treatment Plant Operator",
+            "employer": "The City of Gastonia",
+            "startDate": "2014",
+            "endDate": "2015",
+            "iconUrl": "assets/images/gastonia.PNG"
+        },
+        {
+            "jobTitle": "Data Analyst/Entry Specialist (Contractor)",
+            "employer": "The American Red Cross",
+            "startDate": "2013",
+            "endDate": "2014",
+            "iconUrl": "assets/images/red-cross.PNG"
+        },
+        {
+            "jobTitle": "Paraprofessional/District Executive",
+            "employer": "The Boy Scouts of America",
+            "startDate": "2009",
+            "endDate": "2013",
+            "iconUrl": "assets/images/scouts.PNG"
+        },
+        {
+            "jobTitle": "Missionary",
+            "employer": "The South Africa Durban Mission",
+            "startDate": "2007",
+            "endDate": "2009",
+            "iconUrl": "assets/images/mission.PNG"
+        }
+    ]
+}

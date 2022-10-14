@@ -3,14 +3,14 @@
         "card": {
             "title": "Welcome!",
             "subtitle": "Thanks for stopping by!",
-            "content": "Welcome and thank you for taking some time to view my resume!  I hope you will find my experience, qualifications, and most of all potential to be exactly what you are looking for.  Thanks again and hope to hear from you soon!"
+            "content": "Welcome and thank you for taking some time to view my resume!  I hope you will find my experience, qualifications, and most of all my potential to be exactly what you are looking for.  Thanks again for considering me and hope to hear from you soon!"
         },
-        "imageURL": "assets/welcome.JPG"
+        "imageURL": "assets/images/welcome.JPG"
     },
     "meIn30": {
         "title": "Me In 30 Seconds",
         "subtitle": "Why should you hire me?",
-        "content": "I am passionate about solving problems through technology.  I have 5-years of experience developing cutting edge, extensible software for a Fortune 500 company.  I love engineering and building software solutions which add business value, increase profit margins, and improve lives.  I have a bachelors degree in Software Engineering and have enjoyed continuing to learn new skills and technologies throughout my career.  I am the lead developer of an awesome team of developers, quality assurance specialists, and Agile leaders forcused on partnering with other companies to provide our millions of customers with enhanced opportunities to earn rewards.  I have developed web services, microservices, and have experience with Kafka, Redis, multiple relational database, Angular, and multiple Java frameworks to provide front, middle, and backend solutions to meet requirements in a scalable way.  I am confident I can help deliver solutions no matter how complicated the requirements."
+        "content": "I am passionate about solving problems with technology.  I have 5-years of experience developing cutting edge, extensible software for a Fortune 500 company.  I love engineering and building software solutions which add business value, increase profit margins, and improve lives.  I have a Bachelors in Computer Information Technology and have enjoyed continuing to learn new skills and technologies throughout my career.  I am the lead developer of an awesome team of developers, quality assurance specialists, and Agile leaders.  My team has focused on partnering with merchants to provide our millions of customers with enhanced opportunities to earn rewards on their purchases.  I have developed web services, microservices, and have experience with Kafka, Redis, multiple relational databases, Angular, and multiple Java frameworks to provide front, middle, and backend solutions to meet requirements in a scalable way.  I am confident I can help deliver innovative solutions no matter how complicated the business requirements."
     },
     "optimistic": {
         "title": "Be Optimistic",

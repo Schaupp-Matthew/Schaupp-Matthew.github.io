@@ -1,0 +1,36 @@
+{
+    "educationHistory": [
+        {
+            "school": "Brigham Young University - Idaho",
+            "degree": "Bachelor of Science in Computer Information Technology",
+            "fieldOfStudy": "Computer Science",
+            "startYear": "2016",
+            "endYear": "2018",
+            "iconUrl": "assets/images/byui-logo.PNG"
+        },
+        {
+            "school": "University of South Carolina - Lancaster",
+            "degree": "Associates in Science",
+            "fieldOfStudy": "Applied Science",
+            "startYear": "2009",
+            "endYear": "2011",
+            "iconUrl": "assets/images/uscl-logo.PNG"
+        }
+    ],
+    "certifications": [
+        {
+            "school": "Brigham Young University - Idaho",
+            "certificate": "Computer Information Technology",
+            "fieldOfStudy": "Computer Science",
+            "issueYear": "2017",
+            "iconUrl": "assets/images/byui-logo.PNG"
+        },
+        {
+            "school": "TestOut Corporation",
+            "certificate": "Routing and Switching Pro",
+            "fieldOfStudy": "Computer Networking",
+            "issueYear": "2017",
+            "iconUrl": "assets/images/test-out-logo.PNG"
+        }
+    ]
+}
