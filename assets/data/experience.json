@@ -3,7 +3,7 @@
         {
             "title": "RESTful Web Services",
             "highlights": [
-                "Designed and built interface request and response objects and made available in common libraries for service providers and service consumers to use.",
+                "Designed and built REST interfaces with request and response objects and made them available in common libraries for service providers and service consumers to use.",
                 "Using Spring Boot, developed web service applications which provided multiple resources and operations enabling a customer to view the state of their loyalty accounts and to take actions within the loyalty program.",
                 "Designed and developed web services which enabled customers to view their aggregated earnings, transaction and reward details, take action to activate their offers, opt out of a specific offer, and opt out of the entire program.",
                 "Designed and developed web services which enabled customer service representatives to help resolve customer inqueries with web services which provided an enhanced view of a customers transactions and rewards, offer activation history, and the ability to provide curtesy credits.",
@@ -12,7 +12,7 @@
                 "Closely worked with performance testers and DBAs to build out testing solution, service responders, and complete data conditioning.",
                 "Diagnosed and fixed performance issues found during performance testing to ensure acceptable service response times.",
                 "Integrated with other service providers to consume web services to meet business requirements",
-                "Developed and added metric and monitoring capabilities to appication: Exported logs to Splunk, integrated App Dynamics, provided exceptional application and server logging, and provided health check endpoints which enabled production support to effectively monitor the application health and triage any errors/exceptions resulting in high availability."
+                "Developed and added metric and monitoring capabilities to appications: Exported logs to Splunk, integrated App Dynamics and Dynatrace, provided exceptional application and server logging, and provided health check endpoints which enabled production support to effectively monitor the application health and triage any errors/exceptions ensuring high availability."
             ],
             "technologies": "HTTP, HTTPS, TLS, mutual TLS, Spring Boot, Spring Webflux, Spring REST, JBoss, JSON, XML, Serdes, Object modeling, SAML",
             "iconUrl": "assets/images/rest.PNG",
@@ -68,10 +68,11 @@
             "title": "NoSQL/In Memory Data",
             "highlights": [
                 "Experience using the Lettuce and Jedis Redis clients/libraries to maintain key spaces and indexes in redis.",
-                "Designed key spaces to meet business requirements for presentation layer.",
-                "Used Redis JSON to story and manipulate JSON objects.",
+                "Designed key spaces to meet business requirements for the presentation layer and to reduce the space and number of shards required to operate.",
+                "Used Redis JSON to store and manipulate JSON objects in Redis.",
                 "Used geospacial indeces to serve customers offers within a specific geographical radius.",
-                "Leveraged Redis with Change Data Capture (CDC) MSSQL functionality and Kafka Debezium Connectors to ensure our Redis keyspaces remained in sync with our relational datastore."
+                "Leveraged Redis with Change Data Capture (CDC) MSSQL functionality and Kafka Debezium Connectors to ensure our Redis keyspaces remained in sync with our relational datastore.",
+                "Programmatically maintained multiple keys and keyspaces using a variety of datatypes such as sets, sorted sets, strings, JSON, etc."
             ],
             "technologies": "Redis",
             "iconUrl": "assets/images/redis.PNG",
@@ -96,9 +97,11 @@
                 "Experience configuring log4j2 and other logging frameworks to provide robust, traceable application logs without a negative performance impact.",
                 "Deep understanding of object oriented principles including polymorphism, heirarchy, and inheritance.",
                 "Deep understanding of the different modifiers, of interfaces, of abstract classes and classes, of object, of generics, of packages and package structure.",
-                "Experience with test driven development, developing robust/exhaustive unit tests, and leveraging unit testing frameworks and libraries like JUnit, Hamcrest, Mockito, and AssertJ."
+                "Experience with test driven development, developing robust/exhaustive unit tests, and leveraging unit testing frameworks and libraries like JUnit, Hamcrest, Mockito, and AssertJ.",
+                "Maintained Java keystores and truststores to import certificates for server and client connectivity.",
+                "Efficiently maintained git repositories using appropriate git commands to maintain branches and push code changes. Common commands used include fetch, pull, push, commit, rebase interactively, merge, etc."
             ],
-            "technologies": "Java core, Spring Boot, Frameworks, libraries",
+            "technologies": "Java core, Spring/Spring Boot, Frameworks, libraries, J2EE",
             "iconUrl": "assets/images/java.PNG",
             "iconAltTxt": "Java logo"
         },
@@ -114,6 +117,36 @@
             "technologies": "SDLC, Agile methodologies, Scrum, Kanban, JIRA",
             "iconUrl": "assets/images/agile.PNG",
             "iconAltTxt": "Agile methodologies logo"
+        },
+        {
+            "title": "Amazon Web Services",
+            "highlights": [
+                "Selecting, launching and configuring linux server instances.",
+                "Start, stop, and restart intances as required.",
+                "Remotely SSH into AWS linux server instances to configure as webserver.",
+                "SFTP files to and from AWS servers as required.",
+                "Create new users and manage privileges to enforce least required privileges required by users.",
+                "Configure multi-factor authentication for root and user accounts.",
+                "Acquire and manage web domains.",
+                "Configure DNS records to map domains and subdomains to public IP addresses.",
+                "Configure DNS records to map multiple domains and subdomains to the same public IP address."
+            ],
+            "technologies": "EC2, IAM, Route53",
+            "iconUrl": "assets/images/aws.png",
+            "iconAltTxt": "AWS logo"
+        },
+        {
+            "title": "Wordpress Development",
+            "highlights": [
+                "Installing and configuring Wordpress on linux servers running an Apache or nginx web server.",
+                "Install and customize wordpress themes to match a specified color pallet and typography.",
+                "Build pages and posts.  Upload and manage content to site.",
+                "Ensure strong search engine optimization (SEO) for each page.",
+                "Configure and build site menues, logos, favicons, etc. for clear branding."
+            ],
+            "technologies": "Wordpress themes, Wordpress plugins, XAMPP, LAMP, MySQL, HTML, CSS, PHP, Google ReCAPTCHA, Google Analytics, Google Adsense, SEO",
+            "iconUrl": "assets/images/wordpress.png",
+            "iconAltTxt": "Wordpress logo"
         }
     ]
 }
